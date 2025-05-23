@@ -30,37 +30,39 @@
         {
             panel1 = new Panel();
             button1 = new Button();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(219, 227);
+            panel1.Location = new Point(250, 303);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 100);
+            panel1.Size = new Size(229, 133);
             panel1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(98, 37);
+            button1.Location = new Point(417, 138);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(271, 31);
             button1.TabIndex = 0;
-            button1.Text = "zeft";
+            button1.Text = "Eh ya mina bt3ml washm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(button1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "gymApp";
             Load += Form1_Load;
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
