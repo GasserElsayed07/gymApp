@@ -28,19 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
+            button1 = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(button1);
+            panel1.Location = new Point(219, 227);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 100);
+            panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(98, 37);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "zeft";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "gymApp";
             Load += Form1_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private Button button1;
     }
 }
