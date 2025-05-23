@@ -29,46 +29,92 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             button1 = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Location = new Point(250, 303);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox1);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 256);
             panel1.Name = "panel1";
-            panel1.Size = new Size(229, 133);
+            panel1.Size = new Size(800, 194);
             panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(60, 123);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 1;
+            label2.Text = "password";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(60, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 1;
+            label1.Text = "username";
+            label1.Click += label1_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(142, 120);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(259, 23);
+            textBox2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(142, 55);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(259, 23);
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(417, 138);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(192, 159);
             button1.Name = "button1";
-            button1.Size = new Size(271, 31);
-            button1.TabIndex = 0;
-            button1.Text = "Eh ya mina bt3ml washm";
+            button1.Size = new Size(154, 23);
+            button1.TabIndex = 2;
+            button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(button1);
+            ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "gymApp";
             Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Button button1;
+        private Label label2;
+        private Label label1;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        public Button button1;
     }
 }
