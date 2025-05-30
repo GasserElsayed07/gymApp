@@ -73,5 +73,16 @@ namespace gymApp
             Application.Exit();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Usercs AddUser = new Usercs();
+            AddUser.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
