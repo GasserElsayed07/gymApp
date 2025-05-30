@@ -15,6 +15,7 @@ namespace gymApp
         public mainPage()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +26,13 @@ namespace gymApp
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void customizeDesign()
+        {
+            usersSubMenu.Visible = false;
+            plansSubMenu.Visible = false;
+            progressSubMenu.Visible = false;
         }
     }
 }

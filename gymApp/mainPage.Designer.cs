@@ -37,20 +37,28 @@
             button3 = new Button();
             button4 = new Button();
             button1 = new Button();
-            panel3 = new Panel();
+            plansSubMenu = new Panel();
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            button8 = new Button();
+            progressSubMenu = new Panel();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             usersSubMenu.SuspendLayout();
-            panel3.SuspendLayout();
+            plansSubMenu.SuspendLayout();
+            progressSubMenu.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(progressSubMenu);
+            panel1.Controls.Add(button8);
+            panel1.Controls.Add(plansSubMenu);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(usersSubMenu);
             panel1.Controls.Add(usersButton);
@@ -150,16 +158,16 @@
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // plansSubMenu
             // 
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(button6);
-            panel3.Controls.Add(button7);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 214);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(186, 68);
-            panel3.TabIndex = 4;
+            plansSubMenu.Controls.Add(button5);
+            plansSubMenu.Controls.Add(button6);
+            plansSubMenu.Controls.Add(button7);
+            plansSubMenu.Dock = DockStyle.Top;
+            plansSubMenu.Location = new Point(0, 214);
+            plansSubMenu.Name = "plansSubMenu";
+            plansSubMenu.Size = new Size(186, 68);
+            plansSubMenu.TabIndex = 4;
             // 
             // button5
             // 
@@ -191,6 +199,59 @@
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = true;
             // 
+            // button8
+            // 
+            button8.Dock = DockStyle.Top;
+            button8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.Location = new Point(0, 282);
+            button8.Name = "button8";
+            button8.Size = new Size(186, 23);
+            button8.TabIndex = 5;
+            button8.Text = "Plans";
+            button8.TextAlign = ContentAlignment.MiddleLeft;
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // progressSubMenu
+            // 
+            progressSubMenu.Controls.Add(button9);
+            progressSubMenu.Controls.Add(button10);
+            progressSubMenu.Controls.Add(button11);
+            progressSubMenu.Dock = DockStyle.Top;
+            progressSubMenu.Location = new Point(0, 305);
+            progressSubMenu.Name = "progressSubMenu";
+            progressSubMenu.Size = new Size(186, 68);
+            progressSubMenu.TabIndex = 6;
+            // 
+            // button9
+            // 
+            button9.Dock = DockStyle.Top;
+            button9.Location = new Point(0, 46);
+            button9.Name = "button9";
+            button9.Size = new Size(186, 22);
+            button9.TabIndex = 2;
+            button9.Text = "Print";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            button10.Dock = DockStyle.Top;
+            button10.Location = new Point(0, 23);
+            button10.Name = "button10";
+            button10.Size = new Size(186, 23);
+            button10.TabIndex = 1;
+            button10.Text = "Manage Users";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            button11.Dock = DockStyle.Top;
+            button11.Location = new Point(0, 0);
+            button11.Name = "button11";
+            button11.Size = new Size(186, 23);
+            button11.TabIndex = 0;
+            button11.Text = "Add User";
+            button11.UseVisualStyleBackColor = true;
+            // 
             // mainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -205,7 +266,8 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             usersSubMenu.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            plansSubMenu.ResumeLayout(false);
+            progressSubMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -219,10 +281,15 @@
         private Button button3;
         private Button button2;
         private Button usersButton;
-        private Panel panel3;
+        private Panel plansSubMenu;
         private Button button5;
         private Button button6;
         private Button button7;
         private Button button1;
+        private Panel progressSubMenu;
+        private Button button9;
+        private Button button10;
+        private Button button11;
+        private Button button8;
     }
 }
