@@ -68,5 +68,12 @@ namespace gymApp
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mainPage mainPage = new mainPage();
+            mainPage.Show();
+            this.Hide();
+        }
     }
 }
