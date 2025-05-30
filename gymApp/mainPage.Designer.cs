@@ -46,6 +46,7 @@
             usersButton = new Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
+            mainPageExit = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -252,12 +253,26 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // mainPageExit
+            // 
+            mainPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            mainPageExit.BackColor = Color.Red;
+            mainPageExit.FlatStyle = FlatStyle.Flat;
+            mainPageExit.Location = new Point(780, 0);
+            mainPageExit.Name = "mainPageExit";
+            mainPageExit.Size = new Size(22, 22);
+            mainPageExit.TabIndex = 15;
+            mainPageExit.Text = "X";
+            mainPageExit.UseVisualStyleBackColor = false;
+            mainPageExit.Click += mainPageExit_Click;
+            // 
             // mainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(800, 450);
+            Controls.Add(mainPageExit);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "mainPage";
@@ -291,5 +306,6 @@
         private Button button10;
         private Button button11;
         private Button button8;
+        private Button mainPageExit;
     }
 }

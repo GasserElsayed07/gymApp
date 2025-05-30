@@ -34,5 +34,10 @@ namespace gymApp
             plansSubMenu.Visible = false;
             progressSubMenu.Visible = false;
         }
+
+        private void mainPageExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
