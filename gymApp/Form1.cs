@@ -75,5 +75,7 @@ namespace gymApp
             mainPage.Show();
             this.Hide();
         }
+
+        
     }
 }

@@ -20,8 +20,19 @@ namespace gymApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            showSubMenu(usersSubMenu);
         }
+        private void PlansButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(plansSubMenu);
+        }
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(progressSubMenu);
+        }
+
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -34,10 +45,33 @@ namespace gymApp
             plansSubMenu.Visible = false;
             progressSubMenu.Visible = false;
         }
+        private void hideSubMenu()
+        {
+            if (usersSubMenu.Visible == true)
+                usersSubMenu.Visible = false;
+            if (plansSubMenu.Visible == true)
+                plansSubMenu.Visible = false;
+            if (progressSubMenu.Visible == true)
+                progressSubMenu.Visible = false;
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
 
         private void mainPageExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

@@ -113,6 +113,26 @@ namespace gymApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_470062516_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-470062516-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_587947910_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-587947910-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap King_bodybuilding_and_gym_logo_vector_image_Png {
             get {
                 object obj = ResourceManager.GetObject("King-bodybuilding-and-gym-logo-vector-image-Png", resourceCulture);
