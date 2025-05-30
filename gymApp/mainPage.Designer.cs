@@ -376,7 +376,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.istockphoto_587947910_612x612;
+            pictureBox2.BackgroundImage = Properties.Resources.gymImage1;
             pictureBox2.ErrorImage = null;
             pictureBox2.InitialImage = null;
             pictureBox2.Location = new Point(820, 304);

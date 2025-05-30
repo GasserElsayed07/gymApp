@@ -103,6 +103,16 @@ namespace gymApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gymImage1 {
+            get {
+                object obj = ResourceManager.GetObject("gymImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -116,16 +126,6 @@ namespace gymApp.Properties {
         internal static System.Drawing.Bitmap istockphoto_470062516_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-470062516-612x612", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap istockphoto_587947910_612x612 {
-            get {
-                object obj = ResourceManager.GetObject("istockphoto-587947910-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
