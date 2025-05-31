@@ -1,6 +1,6 @@
 ﻿namespace gymApp
 {
-    partial class MangeClientData
+    partial class ClientPrint
     {
         /// <summary>
         /// Required designer variable.
@@ -48,34 +48,21 @@
             usersButton = new Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            PtintClientPageExit = new Button();
             ClientdataGridView = new DataGridView();
+            button12 = new Button();
+            label3 = new Label();
+            radioButton_male = new RadioButton();
+            AllGenderradioButton1 = new RadioButton();
+            radioButton_female = new RadioButton();
             label6 = new Label();
             comboBox_joinReason = new ComboBox();
-            label7 = new Label();
-            textBox_weight = new TextBox();
-            label8 = new Label();
-            textBox1 = new TextBox();
-            label9 = new Label();
-            textBox2 = new TextBox();
-            label10 = new Label();
-            textBox3 = new TextBox();
-            button_Clear = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            label1 = new Label();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            dateTimePicker_joinDate = new DateTimePicker();
-            button14 = new Button();
-            MangeClientPageExit = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
             usersSubMenu.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -96,7 +83,7 @@
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(202, 600);
-            panel1.TabIndex = 2;
+            panel1.TabIndex = 3;
             // 
             // button8
             // 
@@ -303,7 +290,6 @@
             button4.TabIndex = 2;
             button4.Text = "Print Clients Info";
             button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -319,6 +305,7 @@
             button3.TabIndex = 1;
             button3.Text = "Manage Clients Data ";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -379,130 +366,29 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox3
+            // PtintClientPageExit
             // 
-            pictureBox3.BackgroundImage = Properties.Resources.gymImage1;
-            pictureBox3.ErrorImage = null;
-            pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(821, 304);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(499, 444);
-            pictureBox3.TabIndex = 30;
-            pictureBox3.TabStop = false;
+            PtintClientPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            PtintClientPageExit.BackColor = Color.FromArgb(192, 0, 0);
+            PtintClientPageExit.FlatStyle = FlatStyle.Popup;
+            PtintClientPageExit.Location = new Point(1095, 0);
+            PtintClientPageExit.Margin = new Padding(3, 4, 3, 4);
+            PtintClientPageExit.Name = "PtintClientPageExit";
+            PtintClientPageExit.Size = new Size(25, 29);
+            PtintClientPageExit.TabIndex = 51;
+            PtintClientPageExit.Text = "X";
+            PtintClientPageExit.UseVisualStyleBackColor = false;
+            PtintClientPageExit.Click += PtintClientPageExit_Click;
             // 
             // ClientdataGridView
             // 
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(223, 38);
+            ClientdataGridView.Location = new Point(226, 49);
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
-            ClientdataGridView.Size = new Size(868, 258);
-            ClientdataGridView.TabIndex = 31;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(225, 442);
-            label6.Name = "label6";
-            label6.Size = new Size(144, 31);
-            label6.TabIndex = 32;
-            label6.Text = "Joining for :";
-            // 
-            // comboBox_joinReason
-            // 
-            comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(228, 476);
-            comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(156, 28);
-            comboBox_joinReason.TabIndex = 33;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(412, 378);
-            label7.Name = "label7";
-            label7.Size = new Size(153, 31);
-            label7.TabIndex = 34;
-            label7.Text = "Weight(kg)  :";
-            // 
-            // textBox_weight
-            // 
-            textBox_weight.Location = new Point(421, 412);
-            textBox_weight.Name = "textBox_weight";
-            textBox_weight.Size = new Size(156, 27);
-            textBox_weight.TabIndex = 35;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(417, 442);
-            label8.Name = "label8";
-            label8.Size = new Size(148, 31);
-            label8.TabIndex = 36;
-            label8.Text = "Height(cm) :";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(421, 476);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 27);
-            textBox1.TabIndex = 37;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(616, 378);
-            label9.Name = "label9";
-            label9.Size = new Size(132, 31);
-            label9.TabIndex = 38;
-            label9.Text = "Phone No :";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(617, 410);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(155, 27);
-            textBox2.TabIndex = 39;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(616, 442);
-            label10.Name = "label10";
-            label10.Size = new Size(111, 31);
-            label10.TabIndex = 40;
-            label10.Text = "Address :";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(617, 476);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(155, 27);
-            textBox3.TabIndex = 41;
-            // 
-            // button_Clear
-            // 
-            button_Clear.BackColor = Color.Red;
-            button_Clear.FlatStyle = FlatStyle.Popup;
-            button_Clear.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_Clear.ForeColor = SystemColors.ButtonHighlight;
-            button_Clear.Location = new Point(228, 531);
-            button_Clear.Name = "button_Clear";
-            button_Clear.Size = new Size(156, 45);
-            button_Clear.TabIndex = 42;
-            button_Clear.Text = "Clear";
-            button_Clear.UseVisualStyleBackColor = false;
+            ClientdataGridView.Size = new Size(864, 370);
+            ClientdataGridView.TabIndex = 32;
             // 
             // button12
             // 
@@ -510,130 +396,109 @@
             button12.FlatStyle = FlatStyle.Popup;
             button12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(421, 531);
+            button12.Location = new Point(565, 531);
             button12.Name = "button12";
             button12.Size = new Size(156, 45);
-            button12.TabIndex = 43;
-            button12.Text = "Update";
+            button12.TabIndex = 52;
+            button12.Text = "Print";
             button12.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // label3
             // 
-            button13.BackColor = Color.Red;
-            button13.FlatStyle = FlatStyle.Popup;
-            button13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button13.ForeColor = SystemColors.ButtonHighlight;
-            button13.Location = new Point(616, 531);
-            button13.Name = "button13";
-            button13.Size = new Size(156, 45);
-            button13.TabIndex = 44;
-            button13.Text = "Delete";
-            button13.UseVisualStyleBackColor = false;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(243, 439);
+            label3.Name = "label3";
+            label3.Size = new Size(103, 31);
+            label3.TabIndex = 53;
+            label3.Text = "Gender :";
             // 
-            // label1
+            // radioButton_male
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(230, 321);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 31);
-            label1.TabIndex = 45;
-            label1.Text = "Enter ID  :";
+            radioButton_male.AutoSize = true;
+            radioButton_male.Checked = true;
+            radioButton_male.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButton_male.ForeColor = SystemColors.ButtonFace;
+            radioButton_male.Location = new Point(425, 439);
+            radioButton_male.Name = "radioButton_male";
+            radioButton_male.Size = new Size(86, 32);
+            radioButton_male.TabIndex = 54;
+            radioButton_male.TabStop = true;
+            radioButton_male.Text = "Male ";
+            radioButton_male.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // AllGenderradioButton1
             // 
-            textBox4.Location = new Point(364, 327);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(213, 27);
-            textBox4.TabIndex = 46;
-            textBox4.Text = "Search by ID";
+            AllGenderradioButton1.AutoSize = true;
+            AllGenderradioButton1.Checked = true;
+            AllGenderradioButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AllGenderradioButton1.ForeColor = SystemColors.ButtonFace;
+            AllGenderradioButton1.Location = new Point(353, 439);
+            AllGenderradioButton1.Name = "AllGenderradioButton1";
+            AllGenderradioButton1.Size = new Size(59, 32);
+            AllGenderradioButton1.TabIndex = 55;
+            AllGenderradioButton1.TabStop = true;
+            AllGenderradioButton1.Text = "All";
+            AllGenderradioButton1.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // radioButton_female
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(226, 378);
-            label5.Name = "label5";
-            label5.Size = new Size(133, 31);
-            label5.TabIndex = 47;
-            label5.Text = "Join Date  :";
+            radioButton_female.AutoSize = true;
+            radioButton_female.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButton_female.ForeColor = SystemColors.ButtonFace;
+            radioButton_female.Location = new Point(514, 440);
+            radioButton_female.Name = "radioButton_female";
+            radioButton_female.Size = new Size(100, 32);
+            radioButton_female.TabIndex = 56;
+            radioButton_female.Text = "Female";
+            radioButton_female.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker_joinDate
+            // label6
             // 
-            dateTimePicker_joinDate.Location = new Point(228, 410);
-            dateTimePicker_joinDate.Name = "dateTimePicker_joinDate";
-            dateTimePicker_joinDate.Size = new Size(156, 27);
-            dateTimePicker_joinDate.TabIndex = 48;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonFace;
+            label6.Location = new Point(736, 441);
+            label6.Name = "label6";
+            label6.Size = new Size(144, 31);
+            label6.TabIndex = 57;
+            label6.Text = "Joining for :";
             // 
-            // button14
+            // comboBox_joinReason
             // 
-            button14.BackColor = Color.Red;
-            button14.FlatStyle = FlatStyle.Popup;
-            button14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button14.ForeColor = SystemColors.ButtonHighlight;
-            button14.Location = new Point(617, 327);
-            button14.Name = "button14";
-            button14.Size = new Size(155, 27);
-            button14.TabIndex = 49;
-            button14.Text = "Search";
-            button14.UseVisualStyleBackColor = false;
+            comboBox_joinReason.FormattingEnabled = true;
+            comboBox_joinReason.Location = new Point(893, 445);
+            comboBox_joinReason.Name = "comboBox_joinReason";
+            comboBox_joinReason.Size = new Size(195, 28);
+            comboBox_joinReason.TabIndex = 58;
             // 
-            // MangeClientPageExit
-            // 
-            MangeClientPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            MangeClientPageExit.BackColor = Color.FromArgb(192, 0, 0);
-            MangeClientPageExit.FlatStyle = FlatStyle.Popup;
-            MangeClientPageExit.Location = new Point(1095, 0);
-            MangeClientPageExit.Margin = new Padding(3, 4, 3, 4);
-            MangeClientPageExit.Name = "MangeClientPageExit";
-            MangeClientPageExit.Size = new Size(25, 29);
-            MangeClientPageExit.TabIndex = 50;
-            MangeClientPageExit.Text = "X";
-            MangeClientPageExit.UseVisualStyleBackColor = false;
-            MangeClientPageExit.Click += MangeClientPageExit_Click;
-            // 
-            // MangeClientData
+            // ClientPrint
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
-            Controls.Add(MangeClientPageExit);
-            Controls.Add(button14);
-            Controls.Add(dateTimePicker_joinDate);
-            Controls.Add(label5);
-            Controls.Add(textBox4);
-            Controls.Add(label1);
-            Controls.Add(button13);
-            Controls.Add(button12);
-            Controls.Add(button_Clear);
-            Controls.Add(textBox3);
-            Controls.Add(label10);
-            Controls.Add(textBox2);
-            Controls.Add(label9);
-            Controls.Add(textBox1);
-            Controls.Add(label8);
-            Controls.Add(textBox_weight);
-            Controls.Add(label7);
             Controls.Add(comboBox_joinReason);
             Controls.Add(label6);
+            Controls.Add(radioButton_female);
+            Controls.Add(AllGenderradioButton1);
+            Controls.Add(radioButton_male);
+            Controls.Add(label3);
+            Controls.Add(button12);
             Controls.Add(ClientdataGridView);
+            Controls.Add(PtintClientPageExit);
             Controls.Add(panel1);
-            Controls.Add(pictureBox3);
-            ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "MangeClientData";
+            Name = "ClientPrint";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MangeClientData";
+            Text = "ClientPrint";
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);
             usersSubMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -661,26 +526,14 @@
         private Button usersButton;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox3;
+        private Button PtintClientPageExit;
         private DataGridView ClientdataGridView;
+        private Button button12;
+        private Label label3;
+        private RadioButton radioButton_male;
+        private RadioButton AllGenderradioButton1;
+        private RadioButton radioButton_female;
         private Label label6;
         private ComboBox comboBox_joinReason;
-        private Label label7;
-        private TextBox textBox_weight;
-        private Label label8;
-        private TextBox textBox1;
-        private Label label9;
-        private TextBox textBox2;
-        private Label label10;
-        private TextBox textBox3;
-        private Button button_Clear;
-        private Button button12;
-        private Button button13;
-        private Label label1;
-        private TextBox textBox4;
-        private Label label5;
-        private DateTimePicker dateTimePicker_joinDate;
-        private Button button14;
-        private Button MangeClientPageExit;
     }
 }

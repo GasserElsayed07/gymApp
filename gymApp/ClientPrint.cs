@@ -10,18 +10,43 @@ using System.Windows.Forms;
 
 namespace gymApp
 {
-    public partial class MangeClientData : Form
+    public partial class ClientPrint : Form
     {
-        public MangeClientData()
+        public ClientPrint()
         {
             InitializeComponent();
             customizeDesign();
+        }
+
+        private void usersButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(usersSubMenu);
+
+        }
+
+        private void PlansButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(plansSubMenu);
+        }
+
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(progressSubMenu);
         }
         private void customizeDesign()
         {
             usersSubMenu.Visible = true;
             plansSubMenu.Visible = false;
             progressSubMenu.Visible = false;
+        }
+        private void hideSubMenu()
+        {
+            if (usersSubMenu.Visible == true)
+                usersSubMenu.Visible = false;
+            if (plansSubMenu.Visible == true)
+                plansSubMenu.Visible = false;
+            if (progressSubMenu.Visible == true)
+                progressSubMenu.Visible = false;
         }
         private void showSubMenu(Panel subMenu)
         {
@@ -36,17 +61,7 @@ namespace gymApp
             }
         }
 
-        private void hideSubMenu()
-        {
-            if (usersSubMenu.Visible == true)
-                usersSubMenu.Visible = false;
-            if (plansSubMenu.Visible == true)
-                plansSubMenu.Visible = false;
-            if (progressSubMenu.Visible == true)
-                progressSubMenu.Visible = false;
-        }
-
-        private void MangeClientPageExit_Click(object sender, EventArgs e)
+        private void PtintClientPageExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -58,27 +73,13 @@ namespace gymApp
             this.Hide();
         }
 
-        private void usersButton_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            showSubMenu(usersSubMenu);
-        }
-
-        private void PlansButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(plansSubMenu);
-        }
-
-        private void ProgressButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(progressSubMenu);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
+            MangeClientData MangeClient = new MangeClientData();
+            MangeClient.Show();
             this.Hide();
-
         }
+
+        
     }
 }

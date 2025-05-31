@@ -155,8 +155,15 @@ namespace gymApp
 
         private void MangeClientDataButton_Click(object sender, EventArgs e)
         {
-            MangeClientData MangeClient= new MangeClientData();
+            MangeClientData MangeClient = new MangeClientData();
             MangeClient.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
             this.Hide();
         }
     }
