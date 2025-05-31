@@ -185,6 +185,7 @@ namespace gymApp
             textBox_phone.Clear();
             textBox_address.Clear();
             textBox_height.Clear();
+            userPicture.Image = null;
         }
     }
 }

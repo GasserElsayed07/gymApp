@@ -290,7 +290,6 @@
             button4.TabIndex = 2;
             button4.Text = "Print Clients Info";
             button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -371,7 +370,7 @@
             pictureBox3.Location = new Point(718, 228);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(437, 333);
+            pictureBox3.Size = new Size(262, 222);
             pictureBox3.TabIndex = 30;
             pictureBox3.TabStop = false;
             // 
