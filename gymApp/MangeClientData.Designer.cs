@@ -376,6 +376,8 @@
             // 
             // ClientdataGridView
             // 
+            ClientdataGridView.AllowUserToAddRows = false;
+            ClientdataGridView.AllowUserToDeleteRows = false;
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ClientdataGridView.Location = new Point(195, 28);
@@ -386,6 +388,7 @@
             ClientdataGridView.Size = new Size(760, 194);
             ClientdataGridView.TabIndex = 31;
             ClientdataGridView.CellContentClick += ClientdataGridView_CellContentClick;
+            ClientdataGridView.Click += ClientdataGridView_Click;
             // 
             // label6
             // 

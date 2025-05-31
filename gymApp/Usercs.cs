@@ -187,5 +187,10 @@ namespace gymApp
             textBox_height.Clear();
             userPicture.Image = null;
         }
+
+        private void Usercs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

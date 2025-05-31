@@ -89,5 +89,10 @@ namespace gymApp
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
         }
+
+        private void ClientdataGridView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
