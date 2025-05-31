@@ -51,24 +51,27 @@
             pictureBox3 = new PictureBox();
             ClientdataGridView = new DataGridView();
             label6 = new Label();
-            comboBox_joinReason = new ComboBox();
+            comboBox_manageJoinReason = new ComboBox();
             label7 = new Label();
-            textBox_weight = new TextBox();
+            textBox_manageWeight = new TextBox();
             label8 = new Label();
-            textBox1 = new TextBox();
+            textBox_manageHeight = new TextBox();
             label9 = new Label();
-            textBox2 = new TextBox();
+            textBox_managePhone = new TextBox();
             label10 = new Label();
-            textBox3 = new TextBox();
+            textBox_manageAddress = new TextBox();
             button_Clear = new Button();
-            button12 = new Button();
+            button_update = new Button();
             button13 = new Button();
             label1 = new Label();
-            textBox4 = new TextBox();
+            textBox_search = new TextBox();
             label5 = new Label();
-            dateTimePicker_joinDate = new DateTimePicker();
-            button14 = new Button();
+            dateTimePicker_manageJoinDate = new DateTimePicker();
+            button_search = new Button();
             MangeClientPageExit = new Button();
+            label2 = new Label();
+            textBox_manageID = new TextBox();
+            label3 = new Label();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -385,8 +388,10 @@
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
             ClientdataGridView.RowTemplate.Height = 40;
+            ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientdataGridView.Size = new Size(760, 194);
             ClientdataGridView.TabIndex = 31;
+            ClientdataGridView.CellClick += ClientdataGridView_CellClick;
             ClientdataGridView.CellContentClick += ClientdataGridView_CellContentClick;
             ClientdataGridView.Click += ClientdataGridView_Click;
             // 
@@ -401,14 +406,14 @@
             label6.TabIndex = 32;
             label6.Text = "Joining for :";
             // 
-            // comboBox_joinReason
+            // comboBox_manageJoinReason
             // 
-            comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(200, 357);
-            comboBox_joinReason.Margin = new Padding(3, 2, 3, 2);
-            comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(137, 23);
-            comboBox_joinReason.TabIndex = 33;
+            comboBox_manageJoinReason.FormattingEnabled = true;
+            comboBox_manageJoinReason.Location = new Point(200, 357);
+            comboBox_manageJoinReason.Margin = new Padding(3, 2, 3, 2);
+            comboBox_manageJoinReason.Name = "comboBox_manageJoinReason";
+            comboBox_manageJoinReason.Size = new Size(137, 23);
+            comboBox_manageJoinReason.TabIndex = 33;
             // 
             // label7
             // 
@@ -421,13 +426,13 @@
             label7.TabIndex = 34;
             label7.Text = "Weight(kg)  :";
             // 
-            // textBox_weight
+            // textBox_manageWeight
             // 
-            textBox_weight.Location = new Point(368, 309);
-            textBox_weight.Margin = new Padding(3, 2, 3, 2);
-            textBox_weight.Name = "textBox_weight";
-            textBox_weight.Size = new Size(137, 23);
-            textBox_weight.TabIndex = 35;
+            textBox_manageWeight.Location = new Point(368, 309);
+            textBox_manageWeight.Margin = new Padding(3, 2, 3, 2);
+            textBox_manageWeight.Name = "textBox_manageWeight";
+            textBox_manageWeight.Size = new Size(137, 23);
+            textBox_manageWeight.TabIndex = 35;
             // 
             // label8
             // 
@@ -440,13 +445,13 @@
             label8.TabIndex = 36;
             label8.Text = "Height(cm) :";
             // 
-            // textBox1
+            // textBox_manageHeight
             // 
-            textBox1.Location = new Point(368, 357);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(137, 23);
-            textBox1.TabIndex = 37;
+            textBox_manageHeight.Location = new Point(368, 357);
+            textBox_manageHeight.Margin = new Padding(3, 2, 3, 2);
+            textBox_manageHeight.Name = "textBox_manageHeight";
+            textBox_manageHeight.Size = new Size(137, 23);
+            textBox_manageHeight.TabIndex = 37;
             // 
             // label9
             // 
@@ -459,13 +464,13 @@
             label9.TabIndex = 38;
             label9.Text = "Phone No :";
             // 
-            // textBox2
+            // textBox_managePhone
             // 
-            textBox2.Location = new Point(540, 308);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(136, 23);
-            textBox2.TabIndex = 39;
+            textBox_managePhone.Location = new Point(540, 308);
+            textBox_managePhone.Margin = new Padding(3, 2, 3, 2);
+            textBox_managePhone.Name = "textBox_managePhone";
+            textBox_managePhone.Size = new Size(136, 23);
+            textBox_managePhone.TabIndex = 39;
             // 
             // label10
             // 
@@ -478,13 +483,13 @@
             label10.TabIndex = 40;
             label10.Text = "Address :";
             // 
-            // textBox3
+            // textBox_manageAddress
             // 
-            textBox3.Location = new Point(540, 357);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(136, 23);
-            textBox3.TabIndex = 41;
+            textBox_manageAddress.Location = new Point(540, 357);
+            textBox_manageAddress.Margin = new Padding(3, 2, 3, 2);
+            textBox_manageAddress.Name = "textBox_manageAddress";
+            textBox_manageAddress.Size = new Size(136, 23);
+            textBox_manageAddress.TabIndex = 41;
             // 
             // button_Clear
             // 
@@ -499,20 +504,22 @@
             button_Clear.TabIndex = 42;
             button_Clear.Text = "Clear";
             button_Clear.UseVisualStyleBackColor = false;
+            button_Clear.Click += button_Clear_Click;
             // 
-            // button12
+            // button_update
             // 
-            button12.BackColor = Color.Red;
-            button12.FlatStyle = FlatStyle.Popup;
-            button12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(368, 398);
-            button12.Margin = new Padding(3, 2, 3, 2);
-            button12.Name = "button12";
-            button12.Size = new Size(136, 34);
-            button12.TabIndex = 43;
-            button12.Text = "Update";
-            button12.UseVisualStyleBackColor = false;
+            button_update.BackColor = Color.Red;
+            button_update.FlatStyle = FlatStyle.Popup;
+            button_update.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_update.ForeColor = SystemColors.ButtonHighlight;
+            button_update.Location = new Point(368, 398);
+            button_update.Margin = new Padding(3, 2, 3, 2);
+            button_update.Name = "button_update";
+            button_update.Size = new Size(136, 34);
+            button_update.TabIndex = 43;
+            button_update.Text = "Update";
+            button_update.UseVisualStyleBackColor = false;
+            button_update.Click += button_update_Click;
             // 
             // button13
             // 
@@ -535,18 +542,16 @@
             label1.ForeColor = SystemColors.ButtonFace;
             label1.Location = new Point(201, 241);
             label1.Name = "label1";
-            label1.Size = new Size(99, 25);
+            label1.Size = new Size(0, 25);
             label1.TabIndex = 45;
-            label1.Text = "Enter ID  :";
             // 
-            // textBox4
+            // textBox_search
             // 
-            textBox4.Location = new Point(318, 245);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(187, 23);
-            textBox4.TabIndex = 46;
-            textBox4.Text = "Search by ID";
+            textBox_search.Location = new Point(343, 243);
+            textBox_search.Margin = new Padding(3, 2, 3, 2);
+            textBox_search.Name = "textBox_search";
+            textBox_search.Size = new Size(187, 23);
+            textBox_search.TabIndex = 46;
             // 
             // label5
             // 
@@ -559,27 +564,28 @@
             label5.TabIndex = 47;
             label5.Text = "Join Date  :";
             // 
-            // dateTimePicker_joinDate
+            // dateTimePicker_manageJoinDate
             // 
-            dateTimePicker_joinDate.Location = new Point(200, 308);
-            dateTimePicker_joinDate.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker_joinDate.Name = "dateTimePicker_joinDate";
-            dateTimePicker_joinDate.Size = new Size(137, 23);
-            dateTimePicker_joinDate.TabIndex = 48;
+            dateTimePicker_manageJoinDate.Location = new Point(200, 308);
+            dateTimePicker_manageJoinDate.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker_manageJoinDate.Name = "dateTimePicker_manageJoinDate";
+            dateTimePicker_manageJoinDate.Size = new Size(137, 23);
+            dateTimePicker_manageJoinDate.TabIndex = 48;
             // 
-            // button14
+            // button_search
             // 
-            button14.BackColor = Color.Red;
-            button14.FlatStyle = FlatStyle.Popup;
-            button14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button14.ForeColor = SystemColors.ButtonHighlight;
-            button14.Location = new Point(540, 245);
-            button14.Margin = new Padding(3, 2, 3, 2);
-            button14.Name = "button14";
-            button14.Size = new Size(136, 20);
-            button14.TabIndex = 49;
-            button14.Text = "Search";
-            button14.UseVisualStyleBackColor = false;
+            button_search.BackColor = Color.Red;
+            button_search.FlatStyle = FlatStyle.Popup;
+            button_search.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_search.ForeColor = SystemColors.ButtonHighlight;
+            button_search.Location = new Point(539, 246);
+            button_search.Margin = new Padding(3, 2, 3, 2);
+            button_search.Name = "button_search";
+            button_search.Size = new Size(136, 20);
+            button_search.TabIndex = 49;
+            button_search.Text = "Search";
+            button_search.UseVisualStyleBackColor = false;
+            button_search.Click += button_search_click;
             // 
             // MangeClientPageExit
             // 
@@ -594,30 +600,63 @@
             MangeClientPageExit.UseVisualStyleBackColor = false;
             MangeClientPageExit.Click += MangeClientPageExit_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(198, 241);
+            label2.Name = "label2";
+            label2.Size = new Size(139, 25);
+            label2.TabIndex = 51;
+            label2.Text = "Name/Phone :";
+            // 
+            // textBox_manageID
+            // 
+            textBox_manageID.Location = new Point(731, 357);
+            textBox_manageID.Margin = new Padding(3, 2, 3, 2);
+            textBox_manageID.Name = "textBox_manageID";
+            textBox_manageID.Size = new Size(72, 23);
+            textBox_manageID.TabIndex = 53;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(683, 355);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 25);
+            label3.TabIndex = 52;
+            label3.Text = "ID :";
+            // 
             // MangeClientData
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(978, 450);
+            Controls.Add(textBox_manageID);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(MangeClientPageExit);
-            Controls.Add(button14);
-            Controls.Add(dateTimePicker_joinDate);
+            Controls.Add(button_search);
+            Controls.Add(dateTimePicker_manageJoinDate);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(textBox_search);
             Controls.Add(label1);
             Controls.Add(button13);
-            Controls.Add(button12);
+            Controls.Add(button_update);
             Controls.Add(button_Clear);
-            Controls.Add(textBox3);
+            Controls.Add(textBox_manageAddress);
             Controls.Add(label10);
-            Controls.Add(textBox2);
+            Controls.Add(textBox_managePhone);
             Controls.Add(label9);
-            Controls.Add(textBox1);
+            Controls.Add(textBox_manageHeight);
             Controls.Add(label8);
-            Controls.Add(textBox_weight);
+            Controls.Add(textBox_manageWeight);
             Controls.Add(label7);
-            Controls.Add(comboBox_joinReason);
+            Controls.Add(comboBox_manageJoinReason);
             Controls.Add(label6);
             Controls.Add(ClientdataGridView);
             Controls.Add(panel1);
@@ -627,7 +666,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "MangeClientData";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MangeClientData";
+            Text = "sdasdas";
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);
@@ -665,23 +704,26 @@
         private PictureBox pictureBox3;
         private DataGridView ClientdataGridView;
         private Label label6;
-        private ComboBox comboBox_joinReason;
+        private ComboBox comboBox_manageJoinReason;
         private Label label7;
-        private TextBox textBox_weight;
+        private TextBox textBox_manageWeight;
         private Label label8;
-        private TextBox textBox1;
+        private TextBox textBox_manageHeight;
         private Label label9;
-        private TextBox textBox2;
+        private TextBox textBox_managePhone;
         private Label label10;
-        private TextBox textBox3;
+        private TextBox textBox_manageAddress;
         private Button button_Clear;
-        private Button button12;
+        private Button button_update;
         private Button button13;
         private Label label1;
-        private TextBox textBox4;
+        private TextBox textBox_search;
         private Label label5;
-        private DateTimePicker dateTimePicker_joinDate;
-        private Button button14;
+        private DateTimePicker dateTimePicker_manageJoinDate;
+        private Button button_search;
         private Button MangeClientPageExit;
+        private Label label2;
+        private TextBox textBox_manageID;
+        private Label label3;
     }
 }
