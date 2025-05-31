@@ -80,9 +80,11 @@ namespace gymApp
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            MangeClientData MangeClient = new MangeClientData();
+            MangeClient.Show();
+            this.Hide();
         }
     }
 }

@@ -17,22 +17,54 @@ namespace gymApp
         public Usercs()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void showSubMenu(Panel subMenu)
         {
-
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
         }
-
-        private void label10_Click(object sender, EventArgs e)
+        private void customizeDesign()
         {
-
+            usersSubMenu.Visible = true;
+            plansSubMenu.Visible = false;
+            progressSubMenu.Visible = false;
         }
-
-        private void label7_Click(object sender, EventArgs e)
+        private void usersButton_Click(object sender, EventArgs e)
         {
-
+            showSubMenu(usersSubMenu);
         }
+        private void PlansButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(plansSubMenu);
+        }
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(progressSubMenu);
+        }
+        private void hideSubMenu()
+        {
+            if (usersSubMenu.Visible == true)
+                usersSubMenu.Visible = false;
+            if (plansSubMenu.Visible == true)
+                plansSubMenu.Visible = false;
+            if (progressSubMenu.Visible == true)
+                progressSubMenu.Visible = false;
+        }
+
+
+
+
+
+
 
         private void UserPageExit_Click(object sender, EventArgs e)
         {
@@ -65,7 +97,7 @@ namespace gymApp
             }
             string joinReason = comboBox_joinReason.Text;
             MemoryStream memoryStream = new MemoryStream();
-            userPicture.Image.Save(memoryStream,userPicture.Image.RawFormat);
+            userPicture.Image.Save(memoryStream, userPicture.Image.RawFormat);
             byte[] image = memoryStream.ToArray();
             int birthYear = dateTimePicker_birth.Value.Year;
             int currentYear = DateTime.Now.Year;
@@ -79,11 +111,12 @@ namespace gymApp
                 try
                 {
 
-                    if(user.insertUser(Fname, Lname, bdDate, joinDate, weight, phone, address, gender, joinReason, height, image))
+                    if (user.insertUser(Fname, Lname, bdDate, joinDate, weight, phone, address, gender, joinReason, height, image))
                     {
                         MessageBox.Show("User added successfully!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
 
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -118,6 +151,13 @@ namespace gymApp
             }
 
 
+        }
+
+        private void MangeClientDataButton_Click(object sender, EventArgs e)
+        {
+            MangeClientData MangeClient= new MangeClientData();
+            MangeClient.Show();
+            this.Hide();
         }
     }
 }
