@@ -93,9 +93,8 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(202, 600);
+            panel1.Size = new Size(177, 450);
             panel1.TabIndex = 2;
             // 
             // button8
@@ -106,10 +105,9 @@
             button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button8.ForeColor = SystemColors.ControlLightLight;
-            button8.Location = new Point(0, 499);
-            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Location = new Point(0, 373);
             button8.Name = "button8";
-            button8.Size = new Size(202, 31);
+            button8.Size = new Size(177, 23);
             button8.TabIndex = 7;
             button8.Text = "View Schedule";
             button8.TextAlign = ContentAlignment.MiddleLeft;
@@ -120,9 +118,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(53, 568);
+            button1.Location = new Point(46, 426);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(82, 22);
             button1.TabIndex = 2;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
@@ -133,10 +132,9 @@
             progressSubMenu.Controls.Add(button10);
             progressSubMenu.Controls.Add(button11);
             progressSubMenu.Dock = DockStyle.Top;
-            progressSubMenu.Location = new Point(0, 408);
-            progressSubMenu.Margin = new Padding(3, 4, 3, 4);
+            progressSubMenu.Location = new Point(0, 305);
             progressSubMenu.Name = "progressSubMenu";
-            progressSubMenu.Size = new Size(202, 91);
+            progressSubMenu.Size = new Size(177, 68);
             progressSubMenu.TabIndex = 6;
             // 
             // button9
@@ -146,10 +144,9 @@
             button9.Dock = DockStyle.Top;
             button9.FlatStyle = FlatStyle.Popup;
             button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(0, 62);
-            button9.Margin = new Padding(3, 4, 3, 4);
+            button9.Location = new Point(0, 46);
             button9.Name = "button9";
-            button9.Size = new Size(202, 29);
+            button9.Size = new Size(177, 22);
             button9.TabIndex = 2;
             button9.Text = "Print";
             button9.UseVisualStyleBackColor = false;
@@ -161,10 +158,9 @@
             button10.Dock = DockStyle.Top;
             button10.FlatStyle = FlatStyle.Popup;
             button10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.Location = new Point(0, 31);
-            button10.Margin = new Padding(3, 4, 3, 4);
+            button10.Location = new Point(0, 23);
             button10.Name = "button10";
-            button10.Size = new Size(202, 31);
+            button10.Size = new Size(177, 23);
             button10.TabIndex = 1;
             button10.Text = "Graph of progress";
             button10.UseVisualStyleBackColor = false;
@@ -177,9 +173,8 @@
             button11.FlatStyle = FlatStyle.Popup;
             button11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button11.Location = new Point(0, 0);
-            button11.Margin = new Padding(3, 4, 3, 4);
             button11.Name = "button11";
-            button11.Size = new Size(202, 31);
+            button11.Size = new Size(177, 23);
             button11.TabIndex = 0;
             button11.Text = "Add new progress";
             button11.UseVisualStyleBackColor = false;
@@ -192,10 +187,9 @@
             ProgressButton.FlatStyle = FlatStyle.Popup;
             ProgressButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProgressButton.ForeColor = SystemColors.ControlLightLight;
-            ProgressButton.Location = new Point(0, 377);
-            ProgressButton.Margin = new Padding(3, 4, 3, 4);
+            ProgressButton.Location = new Point(0, 282);
             ProgressButton.Name = "ProgressButton";
-            ProgressButton.Size = new Size(202, 31);
+            ProgressButton.Size = new Size(177, 23);
             ProgressButton.TabIndex = 5;
             ProgressButton.Text = "Progress Tracking";
             ProgressButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -208,10 +202,9 @@
             plansSubMenu.Controls.Add(button6);
             plansSubMenu.Controls.Add(button7);
             plansSubMenu.Dock = DockStyle.Top;
-            plansSubMenu.Location = new Point(0, 286);
-            plansSubMenu.Margin = new Padding(3, 4, 3, 4);
+            plansSubMenu.Location = new Point(0, 214);
             plansSubMenu.Name = "plansSubMenu";
-            plansSubMenu.Size = new Size(202, 91);
+            plansSubMenu.Size = new Size(177, 68);
             plansSubMenu.TabIndex = 4;
             // 
             // button5
@@ -221,10 +214,9 @@
             button5.Dock = DockStyle.Top;
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(0, 62);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(0, 46);
             button5.Name = "button5";
-            button5.Size = new Size(202, 29);
+            button5.Size = new Size(177, 22);
             button5.TabIndex = 2;
             button5.Text = "Print";
             button5.UseVisualStyleBackColor = false;
@@ -236,10 +228,9 @@
             button6.Dock = DockStyle.Top;
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(0, 31);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(0, 23);
             button6.Name = "button6";
-            button6.Size = new Size(202, 31);
+            button6.Size = new Size(177, 23);
             button6.TabIndex = 1;
             button6.Text = "Manage Plans";
             button6.UseVisualStyleBackColor = false;
@@ -252,9 +243,8 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.Location = new Point(0, 0);
-            button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(202, 31);
+            button7.Size = new Size(177, 23);
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
@@ -267,10 +257,9 @@
             PlansButton.FlatStyle = FlatStyle.Popup;
             PlansButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PlansButton.ForeColor = SystemColors.ButtonHighlight;
-            PlansButton.Location = new Point(0, 255);
-            PlansButton.Margin = new Padding(3, 4, 3, 4);
+            PlansButton.Location = new Point(0, 191);
             PlansButton.Name = "PlansButton";
-            PlansButton.Size = new Size(202, 31);
+            PlansButton.Size = new Size(177, 23);
             PlansButton.TabIndex = 3;
             PlansButton.Text = "Plans";
             PlansButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -283,10 +272,9 @@
             usersSubMenu.Controls.Add(button3);
             usersSubMenu.Controls.Add(button2);
             usersSubMenu.Dock = DockStyle.Top;
-            usersSubMenu.Location = new Point(0, 164);
-            usersSubMenu.Margin = new Padding(3, 4, 3, 4);
+            usersSubMenu.Location = new Point(0, 123);
             usersSubMenu.Name = "usersSubMenu";
-            usersSubMenu.Size = new Size(202, 91);
+            usersSubMenu.Size = new Size(177, 68);
             usersSubMenu.TabIndex = 2;
             // 
             // button4
@@ -296,10 +284,9 @@
             button4.Dock = DockStyle.Top;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(0, 62);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(0, 46);
             button4.Name = "button4";
-            button4.Size = new Size(202, 29);
+            button4.Size = new Size(177, 22);
             button4.TabIndex = 2;
             button4.Text = "Print Clients Info";
             button4.UseVisualStyleBackColor = false;
@@ -311,10 +298,9 @@
             button3.Dock = DockStyle.Top;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(0, 31);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(0, 23);
             button3.Name = "button3";
-            button3.Size = new Size(202, 31);
+            button3.Size = new Size(177, 23);
             button3.TabIndex = 1;
             button3.Text = "Manage Clients Data ";
             button3.UseVisualStyleBackColor = false;
@@ -328,9 +314,8 @@
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ControlText;
             button2.Location = new Point(0, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(202, 31);
+            button2.Size = new Size(177, 23);
             button2.TabIndex = 0;
             button2.Text = "Add New Client ";
             button2.UseVisualStyleBackColor = false;
@@ -346,10 +331,9 @@
             usersButton.FlatStyle = FlatStyle.Popup;
             usersButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             usersButton.ForeColor = SystemColors.Control;
-            usersButton.Location = new Point(0, 133);
-            usersButton.Margin = new Padding(3, 4, 3, 4);
+            usersButton.Location = new Point(0, 100);
             usersButton.Name = "usersButton";
-            usersButton.Size = new Size(202, 31);
+            usersButton.Size = new Size(177, 23);
             usersButton.TabIndex = 1;
             usersButton.Text = "Clients";
             usersButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -361,9 +345,8 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(202, 133);
+            panel2.Size = new Size(177, 100);
             panel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -372,8 +355,9 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.King_bodybuilding_and_gym_logo_vector_image_Png;
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(202, 133);
+            pictureBox1.Size = new Size(177, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -383,9 +367,10 @@
             pictureBox3.BackgroundImage = Properties.Resources.gymImage1;
             pictureBox3.ErrorImage = null;
             pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(821, 304);
+            pictureBox3.Location = new Point(718, 228);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(499, 444);
+            pictureBox3.Size = new Size(437, 333);
             pictureBox3.TabIndex = 30;
             pictureBox3.TabStop = false;
             // 
@@ -393,29 +378,33 @@
             // 
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(223, 38);
+            ClientdataGridView.Location = new Point(195, 28);
+            ClientdataGridView.Margin = new Padding(3, 2, 3, 2);
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
-            ClientdataGridView.Size = new Size(868, 258);
+            ClientdataGridView.RowTemplate.Height = 40;
+            ClientdataGridView.Size = new Size(760, 194);
             ClientdataGridView.TabIndex = 31;
+            ClientdataGridView.CellContentClick += ClientdataGridView_CellContentClick;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(225, 442);
+            label6.Location = new Point(197, 332);
             label6.Name = "label6";
-            label6.Size = new Size(144, 31);
+            label6.Size = new Size(120, 25);
             label6.TabIndex = 32;
             label6.Text = "Joining for :";
             // 
             // comboBox_joinReason
             // 
             comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(228, 476);
+            comboBox_joinReason.Location = new Point(200, 357);
+            comboBox_joinReason.Margin = new Padding(3, 2, 3, 2);
             comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(156, 28);
+            comboBox_joinReason.Size = new Size(137, 23);
             comboBox_joinReason.TabIndex = 33;
             // 
             // label7
@@ -423,17 +412,18 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(412, 378);
+            label7.Location = new Point(360, 284);
             label7.Name = "label7";
-            label7.Size = new Size(153, 31);
+            label7.Size = new Size(127, 25);
             label7.TabIndex = 34;
             label7.Text = "Weight(kg)  :";
             // 
             // textBox_weight
             // 
-            textBox_weight.Location = new Point(421, 412);
+            textBox_weight.Location = new Point(368, 309);
+            textBox_weight.Margin = new Padding(3, 2, 3, 2);
             textBox_weight.Name = "textBox_weight";
-            textBox_weight.Size = new Size(156, 27);
+            textBox_weight.Size = new Size(137, 23);
             textBox_weight.TabIndex = 35;
             // 
             // label8
@@ -441,17 +431,18 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(417, 442);
+            label8.Location = new Point(365, 332);
             label8.Name = "label8";
-            label8.Size = new Size(148, 31);
+            label8.Size = new Size(122, 25);
             label8.TabIndex = 36;
             label8.Text = "Height(cm) :";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(421, 476);
+            textBox1.Location = new Point(368, 357);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 27);
+            textBox1.Size = new Size(137, 23);
             textBox1.TabIndex = 37;
             // 
             // label9
@@ -459,17 +450,18 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(616, 378);
+            label9.Location = new Point(539, 284);
             label9.Name = "label9";
-            label9.Size = new Size(132, 31);
+            label9.Size = new Size(111, 25);
             label9.TabIndex = 38;
             label9.Text = "Phone No :";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(617, 410);
+            textBox2.Location = new Point(540, 308);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(155, 27);
+            textBox2.Size = new Size(136, 23);
             textBox2.TabIndex = 39;
             // 
             // label10
@@ -477,17 +469,18 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(616, 442);
+            label10.Location = new Point(539, 332);
             label10.Name = "label10";
-            label10.Size = new Size(111, 31);
+            label10.Size = new Size(93, 25);
             label10.TabIndex = 40;
             label10.Text = "Address :";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(617, 476);
+            textBox3.Location = new Point(540, 357);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(155, 27);
+            textBox3.Size = new Size(136, 23);
             textBox3.TabIndex = 41;
             // 
             // button_Clear
@@ -496,9 +489,10 @@
             button_Clear.FlatStyle = FlatStyle.Popup;
             button_Clear.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_Clear.ForeColor = SystemColors.ButtonHighlight;
-            button_Clear.Location = new Point(228, 531);
+            button_Clear.Location = new Point(200, 398);
+            button_Clear.Margin = new Padding(3, 2, 3, 2);
             button_Clear.Name = "button_Clear";
-            button_Clear.Size = new Size(156, 45);
+            button_Clear.Size = new Size(136, 34);
             button_Clear.TabIndex = 42;
             button_Clear.Text = "Clear";
             button_Clear.UseVisualStyleBackColor = false;
@@ -509,9 +503,10 @@
             button12.FlatStyle = FlatStyle.Popup;
             button12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(421, 531);
+            button12.Location = new Point(368, 398);
+            button12.Margin = new Padding(3, 2, 3, 2);
             button12.Name = "button12";
-            button12.Size = new Size(156, 45);
+            button12.Size = new Size(136, 34);
             button12.TabIndex = 43;
             button12.Text = "Update";
             button12.UseVisualStyleBackColor = false;
@@ -522,9 +517,10 @@
             button13.FlatStyle = FlatStyle.Popup;
             button13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button13.ForeColor = SystemColors.ButtonHighlight;
-            button13.Location = new Point(616, 531);
+            button13.Location = new Point(539, 398);
+            button13.Margin = new Padding(3, 2, 3, 2);
             button13.Name = "button13";
-            button13.Size = new Size(156, 45);
+            button13.Size = new Size(136, 34);
             button13.TabIndex = 44;
             button13.Text = "Delete";
             button13.UseVisualStyleBackColor = false;
@@ -534,17 +530,18 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(230, 321);
+            label1.Location = new Point(201, 241);
             label1.Name = "label1";
-            label1.Size = new Size(118, 31);
+            label1.Size = new Size(99, 25);
             label1.TabIndex = 45;
             label1.Text = "Enter ID  :";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(364, 327);
+            textBox4.Location = new Point(318, 245);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(213, 27);
+            textBox4.Size = new Size(187, 23);
             textBox4.TabIndex = 46;
             textBox4.Text = "Search by ID";
             // 
@@ -553,17 +550,18 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(226, 378);
+            label5.Location = new Point(198, 284);
             label5.Name = "label5";
-            label5.Size = new Size(133, 31);
+            label5.Size = new Size(110, 25);
             label5.TabIndex = 47;
             label5.Text = "Join Date  :";
             // 
             // dateTimePicker_joinDate
             // 
-            dateTimePicker_joinDate.Location = new Point(228, 410);
+            dateTimePicker_joinDate.Location = new Point(200, 308);
+            dateTimePicker_joinDate.Margin = new Padding(3, 2, 3, 2);
             dateTimePicker_joinDate.Name = "dateTimePicker_joinDate";
-            dateTimePicker_joinDate.Size = new Size(156, 27);
+            dateTimePicker_joinDate.Size = new Size(137, 23);
             dateTimePicker_joinDate.TabIndex = 48;
             // 
             // button14
@@ -572,9 +570,10 @@
             button14.FlatStyle = FlatStyle.Popup;
             button14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button14.ForeColor = SystemColors.ButtonHighlight;
-            button14.Location = new Point(617, 327);
+            button14.Location = new Point(540, 245);
+            button14.Margin = new Padding(3, 2, 3, 2);
             button14.Name = "button14";
-            button14.Size = new Size(155, 27);
+            button14.Size = new Size(136, 20);
             button14.TabIndex = 49;
             button14.Text = "Search";
             button14.UseVisualStyleBackColor = false;
@@ -584,10 +583,9 @@
             MangeClientPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             MangeClientPageExit.BackColor = Color.FromArgb(192, 0, 0);
             MangeClientPageExit.FlatStyle = FlatStyle.Popup;
-            MangeClientPageExit.Location = new Point(1095, 0);
-            MangeClientPageExit.Margin = new Padding(3, 4, 3, 4);
+            MangeClientPageExit.Location = new Point(958, 0);
             MangeClientPageExit.Name = "MangeClientPageExit";
-            MangeClientPageExit.Size = new Size(25, 29);
+            MangeClientPageExit.Size = new Size(22, 22);
             MangeClientPageExit.TabIndex = 50;
             MangeClientPageExit.Text = "X";
             MangeClientPageExit.UseVisualStyleBackColor = false;
@@ -595,10 +593,10 @@
             // 
             // MangeClientData
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1118, 600);
+            ClientSize = new Size(978, 450);
             Controls.Add(MangeClientPageExit);
             Controls.Add(button14);
             Controls.Add(dateTimePicker_joinDate);
@@ -623,6 +621,7 @@
             Controls.Add(pictureBox3);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MangeClientData";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MangeClientData";

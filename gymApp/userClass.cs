@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace gymApp
         public bool insertUser(string Fname, string Lname, DateTime bdDate, DateTime joinDate, int weight,
             string phone, string address, string gender, string joinReason, int height, byte[] image)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `user`(`userFirstName`, `userLastName`, `userBirthDate`, `userJoinDate`, `userWeight`, `userPhone`, `userAddress`, `userGender`, `userJoinReason`, `userHeight`, `userImage`) VALUES(@Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image)");
+            MySqlCommand command = new MySqlCommand("INSERT INTO `user`(`userFirstName`, `userLastName`, `userBirthDate`, `userJoinDate`, `userWeight`, `userPhone`, `userAddress`, `userGender`, `userJoinReason`, `userHeight`, `userImage`) VALUES(@Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image)",connect.getConnection);
             // @Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image
             command.Parameters.Add("@Fname", MySqlDbType.VarChar).Value = Fname;
             command.Parameters.Add("@Lname", MySqlDbType.VarChar).Value = Lname;
@@ -42,6 +43,17 @@ namespace gymApp
                 return false;
             }
 
+        }
+
+        public DataTable getUsersList()
+        {
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `user`", connect.getConnection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
+  
         }
     }
 }

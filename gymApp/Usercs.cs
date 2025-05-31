@@ -82,9 +82,19 @@ namespace gymApp
             string Lname = textBox_Lname.Text;
             DateTime bdDate = dateTimePicker_birth.Value;
             DateTime joinDate = dateTimePicker_joinDate.Value;
-            int weight = int.Parse(textBox_weight.Text);
+            int weight;
+            if (!int.TryParse(textBox_weight.Text, out weight))
+            {
+                MessageBox.Show("Please enter a valid weight.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string phone = textBox_phone.Text;
-            int height = int.Parse(textBox_height.Text);
+            int height;
+            if (!int.TryParse(textBox_height.Text, out height))
+            {
+                MessageBox.Show("Please enter a valid height.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string address = textBox_address.Text;
             string gender = "";
             if (radioButton_male.Checked)
@@ -97,6 +107,11 @@ namespace gymApp
             }
             string joinReason = comboBox_joinReason.Text;
             MemoryStream memoryStream = new MemoryStream();
+            if (userPicture.Image == null)
+            {
+                MessageBox.Show("Please select a picture.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             userPicture.Image.Save(memoryStream, userPicture.Image.RawFormat);
             byte[] image = memoryStream.ToArray();
             int birthYear = dateTimePicker_birth.Value.Year;
@@ -155,9 +170,21 @@ namespace gymApp
 
         private void MangeClientDataButton_Click(object sender, EventArgs e)
         {
-            MangeClientData MangeClient= new MangeClientData();
+            MangeClientData MangeClient = new MangeClientData();
             MangeClient.Show();
             this.Hide();
+        }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            textBox_Fname.Clear();
+            textBox_Lname.Clear();
+            dateTimePicker_birth.Value = DateTime.Now;
+            dateTimePicker_joinDate.Value = DateTime.Now;
+            textBox_weight.Clear();
+            textBox_phone.Clear();
+            textBox_address.Clear();
+            textBox_height.Clear();
         }
     }
 }

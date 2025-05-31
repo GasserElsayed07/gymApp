@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace gymApp
 {
     public partial class MangeClientData : Form
     {
+        userClass user = new userClass();
         public MangeClientData()
         {
             InitializeComponent();
             customizeDesign();
+            showData();
         }
         private void customizeDesign()
         {
@@ -71,6 +74,20 @@ namespace gymApp
         private void ProgressButton_Click(object sender, EventArgs e)
         {
             showSubMenu(progressSubMenu);
+        }
+
+        private void ClientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void showData()
+        {
+            ClientdataGridView.DataSource = user.getUsersList();
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[11];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
         }
     }
 }
