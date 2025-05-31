@@ -245,6 +245,7 @@
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // PlansButton
             // 
@@ -492,7 +493,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ClientPrint";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ClientPrint";
+            Text = " ";
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);
