@@ -70,7 +70,7 @@
             dateTimePicker_joinDate = new DateTimePicker();
             textBox_phone = new TextBox();
             UserPageExit = new Button();
-            pictureBox2 = new PictureBox();
+            userPicture = new PictureBox();
             button_upload = new Button();
             button_Add = new Button();
             button_Clear = new Button();
@@ -81,7 +81,7 @@
             usersSubMenu.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
@@ -530,6 +530,7 @@
             // radioButton_male
             // 
             radioButton_male.AutoSize = true;
+            radioButton_male.Checked = true;
             radioButton_male.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton_male.ForeColor = SystemColors.ButtonFace;
             radioButton_male.Location = new Point(496, 141);
@@ -551,7 +552,6 @@
             radioButton_female.Name = "radioButton_female";
             radioButton_female.Size = new Size(83, 25);
             radioButton_female.TabIndex = 20;
-            radioButton_female.TabStop = true;
             radioButton_female.Text = "Female";
             radioButton_female.UseVisualStyleBackColor = true;
             // 
@@ -592,15 +592,16 @@
             UserPageExit.UseVisualStyleBackColor = false;
             UserPageExit.Click += UserPageExit_Click;
             // 
-            // pictureBox2
+            // userPicture
             // 
-            pictureBox2.BackColor = SystemColors.AppWorkspace;
-            pictureBox2.Location = new Point(790, 43);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(138, 118);
-            pictureBox2.TabIndex = 25;
-            pictureBox2.TabStop = false;
+            userPicture.BackColor = SystemColors.AppWorkspace;
+            userPicture.Location = new Point(790, 43);
+            userPicture.Margin = new Padding(3, 2, 3, 2);
+            userPicture.Name = "userPicture";
+            userPicture.Size = new Size(138, 118);
+            userPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            userPicture.TabIndex = 25;
+            userPicture.TabStop = false;
             // 
             // button_upload
             // 
@@ -615,6 +616,7 @@
             button_upload.TabIndex = 26;
             button_upload.Text = "Upload";
             button_upload.UseVisualStyleBackColor = false;
+            button_upload.Click += button_upload_Click;
             // 
             // button_Add
             // 
@@ -629,7 +631,7 @@
             button_Add.TabIndex = 27;
             button_Add.Text = "Add";
             button_Add.UseVisualStyleBackColor = false;
-            button_Add.Click += button13_Click;
+            button_Add.Click += button_Add_Click;
             // 
             // button_Clear
             // 
@@ -666,7 +668,7 @@
             Controls.Add(button_Clear);
             Controls.Add(button_Add);
             Controls.Add(button_upload);
-            Controls.Add(pictureBox2);
+            Controls.Add(userPicture);
             Controls.Add(UserPageExit);
             Controls.Add(textBox_phone);
             Controls.Add(dateTimePicker_joinDate);
@@ -702,7 +704,7 @@
             usersSubMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -752,7 +754,7 @@
         private DateTimePicker dateTimePicker_joinDate;
         private TextBox textBox_phone;
         private Button UserPageExit;
-        private PictureBox pictureBox2;
+        private PictureBox userPicture;
         private Button button_upload;
         private Button button_Add;
         private Button button_Clear;
