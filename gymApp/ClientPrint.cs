@@ -10,40 +10,32 @@ using System.Windows.Forms;
 
 namespace gymApp
 {
-    public partial class mainPage : Form
+    public partial class ClientPrint : Form
     {
-        public mainPage()
+        public ClientPrint()
         {
             InitializeComponent();
             customizeDesign();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void usersButton_Click(object sender, EventArgs e)
         {
             showSubMenu(usersSubMenu);
+
         }
+
         private void PlansButton_Click(object sender, EventArgs e)
         {
             showSubMenu(plansSubMenu);
         }
+
         private void ProgressButton_Click(object sender, EventArgs e)
         {
             showSubMenu(progressSubMenu);
         }
-
-
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
-
         private void customizeDesign()
         {
-            usersSubMenu.Visible = false;
+            usersSubMenu.Visible = true;
             plansSubMenu.Visible = false;
             progressSubMenu.Visible = false;
         }
@@ -69,8 +61,7 @@ namespace gymApp
             }
         }
 
-
-        private void mainPageExit_Click(object sender, EventArgs e)
+        private void PtintClientPageExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -88,5 +79,7 @@ namespace gymApp
             MangeClient.Show();
             this.Hide();
         }
+
+        
     }
 }

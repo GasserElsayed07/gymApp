@@ -297,6 +297,7 @@
             button4.TabIndex = 2;
             button4.Text = "Print Clients Info";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // MangeClientDataButton
             // 
