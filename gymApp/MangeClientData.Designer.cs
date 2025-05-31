@@ -72,6 +72,7 @@
             label2 = new Label();
             textBox_manageID = new TextBox();
             label3 = new Label();
+            UserPageExit = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -383,16 +384,15 @@
             ClientdataGridView.AllowUserToDeleteRows = false;
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(195, 28);
+            ClientdataGridView.Location = new Point(195, 27);
             ClientdataGridView.Margin = new Padding(3, 2, 3, 2);
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
             ClientdataGridView.RowTemplate.Height = 40;
             ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ClientdataGridView.Size = new Size(765, 146);
+            ClientdataGridView.Size = new Size(765, 147);
             ClientdataGridView.TabIndex = 31;
             ClientdataGridView.CellClick += ClientdataGridView_CellClick;
-            ClientdataGridView.CellContentClick += ClientdataGridView_CellContentClick;
             ClientdataGridView.Click += ClientdataGridView_Click;
             // 
             // label6
@@ -630,12 +630,26 @@
             label3.TabIndex = 52;
             label3.Text = "ID :";
             // 
+            // UserPageExit
+            // 
+            UserPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            UserPageExit.BackColor = Color.FromArgb(192, 0, 0);
+            UserPageExit.FlatStyle = FlatStyle.Popup;
+            UserPageExit.Location = new Point(960, 0);
+            UserPageExit.Name = "UserPageExit";
+            UserPageExit.Size = new Size(22, 22);
+            UserPageExit.TabIndex = 54;
+            UserPageExit.Text = "X";
+            UserPageExit.UseVisualStyleBackColor = false;
+            UserPageExit.Click += UserPageExit_Click;
+            // 
             // MangeClientData
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(981, 449);
+            Controls.Add(UserPageExit);
             Controls.Add(textBox_manageID);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -725,5 +739,6 @@
         private Label label2;
         private TextBox textBox_manageID;
         private Label label3;
+        private Button UserPageExit;
     }
 }

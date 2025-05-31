@@ -77,10 +77,6 @@ namespace gymApp
             showSubMenu(progressSubMenu);
         }
 
-        private void ClientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void showData()
         {
@@ -93,6 +89,7 @@ namespace gymApp
 
         private void ClientdataGridView_Click(object sender, EventArgs e)
         {
+            textBox_manageID.Text = ClientdataGridView.CurrentRow.Cells[0].Value.ToString();
             dateTimePicker_manageJoinDate.Value = Convert.ToDateTime(ClientdataGridView.CurrentRow.Cells[4].Value);
             textBox_manageWeight.Text = ClientdataGridView.CurrentRow.Cells[5].Value.ToString();
             textBox_managePhone.Text = ClientdataGridView.CurrentRow.Cells[6].Value.ToString();
@@ -167,7 +164,7 @@ namespace gymApp
                 try
                 {
 
-                    if (user.updateUser(id,joinDate, weight, phone, address, joinReason, height))
+                    if (user.updateUser(id, joinDate, weight, phone, address, joinReason, height))
                     {
                         MessageBox.Show("User updated successfully!", "update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -184,5 +181,9 @@ namespace gymApp
             }
         }
 
+        private void UserPageExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
