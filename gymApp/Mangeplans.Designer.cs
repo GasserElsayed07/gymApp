@@ -1,6 +1,6 @@
 ﻿namespace gymApp
 {
-    partial class ClientPrint
+    partial class Mangeplans
     {
         /// <summary>
         /// Required designer variable.
@@ -48,22 +48,15 @@
             usersButton = new Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
-            PtintClientPageExit = new Button();
-            ClientdataGridView = new DataGridView();
-            button12 = new Button();
-            label3 = new Label();
-            radioButton_male = new RadioButton();
-            AllGenderradioButton1 = new RadioButton();
-            radioButton_female = new RadioButton();
-            label6 = new Label();
-            comboBox_joinReason = new ComboBox();
+            MangePlansPageExit = new Button();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
             usersSubMenu.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -83,7 +76,7 @@
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(202, 600);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 2;
             // 
             // button8
             // 
@@ -107,7 +100,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(53, 568);
+            button1.Location = new Point(52, 568);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -187,7 +180,6 @@
             ProgressButton.Text = "Progress Tracking";
             ProgressButton.TextAlign = ContentAlignment.MiddleLeft;
             ProgressButton.UseVisualStyleBackColor = false;
-            ProgressButton.Click += ProgressButton_Click;
             // 
             // plansSubMenu
             // 
@@ -245,7 +237,6 @@
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
             // 
             // PlansButton
             // 
@@ -263,7 +254,6 @@
             PlansButton.Text = "Plans";
             PlansButton.TextAlign = ContentAlignment.MiddleLeft;
             PlansButton.UseVisualStyleBackColor = false;
-            PlansButton.Click += PlansButton_Click;
             // 
             // usersSubMenu
             // 
@@ -289,8 +279,9 @@
             button4.Name = "button4";
             button4.Size = new Size(202, 29);
             button4.TabIndex = 2;
-            button4.Text = "Print Clients Info";
+            button4.Text = "Print Client Info";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -321,7 +312,7 @@
             button2.Name = "button2";
             button2.Size = new Size(202, 31);
             button2.TabIndex = 0;
-            button2.Text = "Add New Client ";
+            button2.Text = "Add New Client  ";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -340,7 +331,7 @@
             usersButton.Name = "usersButton";
             usersButton.Size = new Size(202, 31);
             usersButton.TabIndex = 1;
-            usersButton.Text = "Clients";
+            usersButton.Text = "Clients ";
             usersButton.TextAlign = ContentAlignment.MiddleLeft;
             usersButton.UseVisualStyleBackColor = false;
             usersButton.Click += usersButton_Click;
@@ -367,142 +358,52 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // PtintClientPageExit
+            // MangePlansPageExit
             // 
-            PtintClientPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            PtintClientPageExit.BackColor = Color.FromArgb(192, 0, 0);
-            PtintClientPageExit.FlatStyle = FlatStyle.Popup;
-            PtintClientPageExit.Location = new Point(1095, 0);
-            PtintClientPageExit.Margin = new Padding(3, 4, 3, 4);
-            PtintClientPageExit.Name = "PtintClientPageExit";
-            PtintClientPageExit.Size = new Size(25, 29);
-            PtintClientPageExit.TabIndex = 51;
-            PtintClientPageExit.Text = "X";
-            PtintClientPageExit.UseVisualStyleBackColor = false;
-            PtintClientPageExit.Click += PtintClientPageExit_Click;
+            MangePlansPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            MangePlansPageExit.BackColor = Color.FromArgb(192, 0, 0);
+            MangePlansPageExit.FlatStyle = FlatStyle.Popup;
+            MangePlansPageExit.Location = new Point(1095, 0);
+            MangePlansPageExit.Margin = new Padding(3, 4, 3, 4);
+            MangePlansPageExit.Name = "MangePlansPageExit";
+            MangePlansPageExit.Size = new Size(25, 29);
+            MangePlansPageExit.TabIndex = 51;
+            MangePlansPageExit.Text = "X";
+            MangePlansPageExit.UseVisualStyleBackColor = false;
+            MangePlansPageExit.Click += MangePlansPageExit_Click;
             // 
-            // ClientdataGridView
+            // pictureBox3
             // 
-            ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
-            ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(226, 49);
-            ClientdataGridView.Name = "ClientdataGridView";
-            ClientdataGridView.RowHeadersWidth = 51;
-            ClientdataGridView.Size = new Size(864, 370);
-            ClientdataGridView.TabIndex = 32;
+            pictureBox3.BackgroundImage = Properties.Resources.gymImage1;
+            pictureBox3.ErrorImage = null;
+            pictureBox3.InitialImage = null;
+            pictureBox3.Location = new Point(821, 304);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(299, 296);
+            pictureBox3.TabIndex = 52;
+            pictureBox3.TabStop = false;
             // 
-            // button12
-            // 
-            button12.BackColor = Color.Red;
-            button12.FlatStyle = FlatStyle.Popup;
-            button12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(565, 531);
-            button12.Name = "button12";
-            button12.Size = new Size(156, 45);
-            button12.TabIndex = 52;
-            button12.Text = "Print";
-            button12.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(243, 439);
-            label3.Name = "label3";
-            label3.Size = new Size(103, 31);
-            label3.TabIndex = 53;
-            label3.Text = "Gender :";
-            // 
-            // radioButton_male
-            // 
-            radioButton_male.AutoSize = true;
-            radioButton_male.Checked = true;
-            radioButton_male.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton_male.ForeColor = SystemColors.ButtonFace;
-            radioButton_male.Location = new Point(425, 439);
-            radioButton_male.Name = "radioButton_male";
-            radioButton_male.Size = new Size(86, 32);
-            radioButton_male.TabIndex = 54;
-            radioButton_male.TabStop = true;
-            radioButton_male.Text = "Male ";
-            radioButton_male.UseVisualStyleBackColor = true;
-            // 
-            // AllGenderradioButton1
-            // 
-            AllGenderradioButton1.AutoSize = true;
-            AllGenderradioButton1.Checked = true;
-            AllGenderradioButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AllGenderradioButton1.ForeColor = SystemColors.ButtonFace;
-            AllGenderradioButton1.Location = new Point(353, 439);
-            AllGenderradioButton1.Name = "AllGenderradioButton1";
-            AllGenderradioButton1.Size = new Size(59, 32);
-            AllGenderradioButton1.TabIndex = 55;
-            AllGenderradioButton1.TabStop = true;
-            AllGenderradioButton1.Text = "All";
-            AllGenderradioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_female
-            // 
-            radioButton_female.AutoSize = true;
-            radioButton_female.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton_female.ForeColor = SystemColors.ButtonFace;
-            radioButton_female.Location = new Point(514, 440);
-            radioButton_female.Name = "radioButton_female";
-            radioButton_female.Size = new Size(100, 32);
-            radioButton_female.TabIndex = 56;
-            radioButton_female.Text = "Female";
-            radioButton_female.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(736, 441);
-            label6.Name = "label6";
-            label6.Size = new Size(144, 31);
-            label6.TabIndex = 57;
-            label6.Text = "Joining for :";
-            // 
-            // comboBox_joinReason
-            // 
-            comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(893, 445);
-            comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(195, 28);
-            comboBox_joinReason.TabIndex = 58;
-            // 
-            // ClientPrint
+            // Mangeplans
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
-            Controls.Add(comboBox_joinReason);
-            Controls.Add(label6);
-            Controls.Add(radioButton_female);
-            Controls.Add(AllGenderradioButton1);
-            Controls.Add(radioButton_male);
-            Controls.Add(label3);
-            Controls.Add(button12);
-            Controls.Add(ClientdataGridView);
-            Controls.Add(PtintClientPageExit);
+            Controls.Add(pictureBox3);
+            Controls.Add(MangePlansPageExit);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ClientPrint";
+            Name = "Mangeplans";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
+            Text = "Mangeplans";
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);
             usersSubMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -527,14 +428,7 @@
         private Button usersButton;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private Button PtintClientPageExit;
-        private DataGridView ClientdataGridView;
-        private Button button12;
-        private Label label3;
-        private RadioButton radioButton_male;
-        private RadioButton AllGenderradioButton1;
-        private RadioButton radioButton_female;
-        private Label label6;
-        private ComboBox comboBox_joinReason;
+        private Button MangePlansPageExit;
+        private PictureBox pictureBox3;
     }
 }

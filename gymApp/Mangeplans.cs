@@ -10,51 +10,25 @@ using System.Windows.Forms;
 
 namespace gymApp
 {
-    public partial class mainPage : Form
+    public partial class Mangeplans : Form
     {
-        public mainPage()
+        public Mangeplans()
         {
             InitializeComponent();
             customizeDesign();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            showSubMenu(usersSubMenu);
-        }
-        private void PlansButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(plansSubMenu);
-        }
-        private void ProgressButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(progressSubMenu);
-        }
-
-
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
-
         private void customizeDesign()
         {
             usersSubMenu.Visible = false;
-            plansSubMenu.Visible = false;
+            plansSubMenu.Visible = true;
             progressSubMenu.Visible = false;
         }
-        private void hideSubMenu()
+
+
+        private void usersButton_Click(object sender, EventArgs e)
         {
-            if (usersSubMenu.Visible == true)
-                usersSubMenu.Visible = false;
-            if (plansSubMenu.Visible == true)
-                plansSubMenu.Visible = false;
-            if (progressSubMenu.Visible == true)
-                progressSubMenu.Visible = false;
+            showSubMenu(usersSubMenu);
+
         }
         private void showSubMenu(Panel subMenu)
         {
@@ -68,11 +42,14 @@ namespace gymApp
                 subMenu.Visible = false;
             }
         }
-
-
-        private void mainPageExit_Click(object sender, EventArgs e)
+        private void hideSubMenu()
         {
-            Application.Exit();
+            if (usersSubMenu.Visible == true)
+                usersSubMenu.Visible = false;
+            if (plansSubMenu.Visible == true)
+                plansSubMenu.Visible = false;
+            if (progressSubMenu.Visible == true)
+                progressSubMenu.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,11 +66,19 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            AddPlan addPlan = new AddPlan();
-            addPlan.Show();
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
             this.Hide();
         }
+
+        private void MangePlansPageExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
+
 }
+   
+

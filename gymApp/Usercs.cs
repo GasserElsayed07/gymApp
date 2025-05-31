@@ -192,5 +192,19 @@ namespace gymApp
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddPlan AddPlan = new AddPlan();  
+            AddPlan.Show();
+            this.Hide();
+        }
     }
 }
