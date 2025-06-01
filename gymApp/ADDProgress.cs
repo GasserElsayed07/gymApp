@@ -10,34 +10,21 @@ using System.Windows.Forms;
 
 namespace gymApp
 {
-    public partial class AddPlan : Form
+    public partial class ADDProgress : Form
     {
-        public AddPlan()
+        public ADDProgress()
         {
             InitializeComponent();
             customizeDesign();
         }
+
         private void customizeDesign()
         {
             usersSubMenu.Visible = false;
-            plansSubMenu.Visible = true;
-            progressSubMenu.Visible = false;
+            plansSubMenu.Visible = false;
+            progressSubMenu.Visible = true;
         }
 
-        private void usersButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(usersSubMenu);
-        }
-
-        private void PlansButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(plansSubMenu);
-        }
-
-        private void ProgressButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(progressSubMenu);
-        }
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -60,12 +47,20 @@ namespace gymApp
                 progressSubMenu.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void usersButton_Click(object sender, EventArgs e)
         {
-            Usercs AddUser = new Usercs();
-            AddUser.Show();
-            this.Hide();
+            showSubMenu(usersSubMenu);
         }
+        private void PlansButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(plansSubMenu);
+        }
+
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(progressSubMenu);
+        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -81,9 +76,18 @@ namespace gymApp
             this.Hide();
         }
 
-        private void AddPlanExit_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Usercs AddUser = new Usercs();
+            AddUser.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddPlan AddPlan = new AddPlan();
+            AddPlan.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -100,12 +104,9 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void AddPlanExit_Click(object sender, EventArgs e)
         {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

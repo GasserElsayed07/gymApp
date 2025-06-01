@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button8 = new Button();
-            button1 = new Button();
             progressSubMenu = new Panel();
             button9 = new Button();
             button10 = new Button();
@@ -51,6 +49,7 @@
             mainPageExit = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -63,7 +62,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(192, 0, 0);
-            panel1.Controls.Add(button8);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(progressSubMenu);
             panel1.Controls.Add(ProgressButton);
@@ -78,35 +76,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(202, 600);
             panel1.TabIndex = 0;
-            // 
-            // button8
-            // 
-            button8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button8.BackColor = Color.DarkRed;
-            button8.Dock = DockStyle.Top;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = SystemColors.ControlLightLight;
-            button8.Location = new Point(0, 499);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(202, 31);
-            button8.TabIndex = 7;
-            button8.Text = "View Schedule";
-            button8.TextAlign = ContentAlignment.MiddleLeft;
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(52, 568);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = true;
             // 
             // progressSubMenu
             // 
@@ -164,6 +133,7 @@
             button11.TabIndex = 0;
             button11.Text = "Add new progress";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // ProgressButton
             // 
@@ -401,6 +371,19 @@
             label1.TabIndex = 17;
             label1.Text = "Welcome Coach Gaber ";
             // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(16, 568);
+            button1.Name = "button1";
+            button1.Size = new Size(164, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Back to Dashboard";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // mainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -448,9 +431,8 @@
         private Button button11;
         private Button ProgressButton;
         private Button mainPageExit;
-        private Button button1;
-        private Button button8;
         private PictureBox pictureBox2;
         private Label label1;
+        private Button button1;
     }
 }

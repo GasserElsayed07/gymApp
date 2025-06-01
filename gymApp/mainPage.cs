@@ -109,5 +109,19 @@ namespace gymApp
             PrintPlan.Show();
             this.Hide();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ADDProgress addProgress = new ADDProgress();
+            addProgress.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            mainPage mainPage = new mainPage();
+            mainPage.Show();
+            this.Hide();
+        }
     }
 }
