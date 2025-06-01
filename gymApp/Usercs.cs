@@ -213,5 +213,12 @@ namespace gymApp
             MangePlans.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
+        }
     }
 }

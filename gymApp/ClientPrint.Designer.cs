@@ -215,6 +215,7 @@
             button5.TabIndex = 2;
             button5.Text = "Print";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -455,7 +456,6 @@
             radioButton_female.TabIndex = 56;
             radioButton_female.Text = "Female";
             radioButton_female.UseVisualStyleBackColor = true;
-            
             // 
             // label6
             // 
