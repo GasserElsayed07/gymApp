@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace gymApp
 {
     public partial class ClientPrint : Form
     {
+        userClass user = new userClass();
         public ClientPrint()
         {
             InitializeComponent();
@@ -125,6 +128,25 @@ namespace gymApp
             this.Hide();
         }
 
-        
+        private void showData(MySqlCommand command)
+        {
+            ClientdataGridViewPrint.ReadOnly = true;
+            ClientdataGridViewPrint.DataSource = user.getListForPrint(command);
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn = (DataGridViewImageColumn)ClientdataGridViewPrint.Columns[11];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
+
+        }
+
+        private void ClientdataGridViewPrint_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ClientPrint_Load(object sender, EventArgs e)
+        {
+            showData(new MySqlCommand("SELECT * FROM `user` "));
+        }
     }
 }

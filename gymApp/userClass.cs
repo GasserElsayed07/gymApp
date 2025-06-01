@@ -91,5 +91,14 @@ namespace gymApp
             }
 
         }
+
+        public DataTable getListForPrint(MySqlCommand command)
+        {
+            command.Connection = connect.getConnection;
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
+        }
     }
 }
