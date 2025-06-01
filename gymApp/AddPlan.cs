@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +12,13 @@ using System.Windows.Forms;
 namespace gymApp
 {
     public partial class AddPlan : Form
-    {
+    {   
+        planClass plan = new planClass();
         public AddPlan()
         {
             InitializeComponent();
             customizeDesign();
+            showData();
         }
         private void customizeDesign()
         {
@@ -24,6 +27,7 @@ namespace gymApp
             progressSubMenu.Visible = false;
         }
 
+        #region front end stuff
         private void usersButton_Click(object sender, EventArgs e)
         {
             showSubMenu(usersSubMenu);
@@ -121,9 +125,48 @@ namespace gymApp
             PrintProgress.Show();
             this.Hide();
         }
-
+        #endregion
         private void AddPlan_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Lname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void showData()
+        {
+            planDataGridView.DataSource = plan.getPlansList();
+        }
+        public bool verify()
+        {
+            if ((textBox_planName.Text == "") || (textBox_planTier.Text == "") || (textBox_planDuration.Text == ""))
+            {
+                MessageBox.Show("Please fill all fields", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private void button_addPLan_Click(object sender, EventArgs e)
+        {
+            string planName = textBox_planName.Text;
+            string planTier = textBox_planTier.Text;
+            string planDuration = textBox_planDuration.Text;
+            if (verify())
+            {
+                plan.insertPlan(planName, planTier, planDuration);
+                MessageBox.Show("Plan Added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
     }

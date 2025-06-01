@@ -366,6 +366,7 @@
             ClientdataGridView.Size = new Size(765, 147);
             ClientdataGridView.TabIndex = 31;
             ClientdataGridView.CellClick += ClientdataGridView_CellClick;
+            ClientdataGridView.CellContentClick += ClientdataGridView_CellContentClick;
             ClientdataGridView.Click += ClientdataGridView_Click;
             // 
             // label6
@@ -658,6 +659,7 @@
             Name = "MangeClientData";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "sdasdas";
+            Load += MangeClientData_Load;
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);

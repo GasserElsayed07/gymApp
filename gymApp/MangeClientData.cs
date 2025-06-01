@@ -251,5 +251,15 @@ namespace gymApp
                 }
             }
         }
+
+        private void ClientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void MangeClientData_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

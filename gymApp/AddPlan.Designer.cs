@@ -47,16 +47,16 @@
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            comboBox1 = new ComboBox();
             AddPlanExit = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
-            ClientdataGridView = new DataGridView();
-            button12 = new Button();
+            planDataGridView = new DataGridView();
+            button_addPLan = new Button();
             label4 = new Label();
-            comboBox3 = new ComboBox();
+            textBox_planTier = new TextBox();
+            textBox_planDuration = new TextBox();
+            textBox_planName = new TextBox();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -64,7 +64,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)planDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -338,15 +338,6 @@
             pictureBox2.TabIndex = 17;
             pictureBox2.TabStop = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(210, 47);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(155, 23);
-            comboBox1.TabIndex = 18;
-            // 
             // AddPlanExit
             // 
             AddPlanExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -365,11 +356,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(204, 22);
+            label1.Location = new Point(210, 22);
             label1.Name = "label1";
-            label1.Size = new Size(99, 25);
+            label1.Size = new Size(131, 25);
             label1.TabIndex = 46;
-            label1.Text = "Enter ID  :";
+            label1.Text = "Enter Name  :";
             // 
             // label2
             // 
@@ -385,72 +376,77 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(396, 22);
+            label3.Location = new Point(424, 22);
             label3.Name = "label3";
-            label3.Size = new Size(165, 25);
+            label3.Size = new Size(152, 25);
             label3.TabIndex = 48;
-            label3.Text = "Enter Plan Type  :";
+            label3.Text = "Enter Plan Tier :";
+            label3.Click += label3_Click;
             // 
-            // comboBox2
+            // planDataGridView
             // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Sliver Plan ", "Gold Plan ", "Premium Plan" });
-            comboBox2.Location = new Point(401, 47);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(205, 23);
-            comboBox2.TabIndex = 49;
+            planDataGridView.AllowUserToAddRows = false;
+            planDataGridView.AllowUserToDeleteRows = false;
+            planDataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
+            planDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            planDataGridView.Location = new Point(210, 84);
+            planDataGridView.Margin = new Padding(3, 2, 3, 2);
+            planDataGridView.Name = "planDataGridView";
+            planDataGridView.RowHeadersWidth = 51;
+            planDataGridView.RowTemplate.Height = 40;
+            planDataGridView.Size = new Size(561, 314);
+            planDataGridView.TabIndex = 50;
             // 
-            // ClientdataGridView
+            // button_addPLan
             // 
-            ClientdataGridView.AllowUserToAddRows = false;
-            ClientdataGridView.AllowUserToDeleteRows = false;
-            ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
-            ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(210, 84);
-            ClientdataGridView.Margin = new Padding(3, 2, 3, 2);
-            ClientdataGridView.Name = "ClientdataGridView";
-            ClientdataGridView.RowHeadersWidth = 51;
-            ClientdataGridView.RowTemplate.Height = 40;
-            ClientdataGridView.Size = new Size(561, 314);
-            ClientdataGridView.TabIndex = 50;
-            // 
-            // button12
-            // 
-            button12.BackColor = Color.Red;
-            button12.FlatStyle = FlatStyle.Popup;
-            button12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(210, 407);
-            button12.Margin = new Padding(3, 2, 3, 2);
-            button12.Name = "button12";
-            button12.Size = new Size(136, 34);
-            button12.TabIndex = 52;
-            button12.Text = "Assign Plan";
-            button12.UseVisualStyleBackColor = false;
+            button_addPLan.BackColor = Color.Red;
+            button_addPLan.FlatStyle = FlatStyle.Popup;
+            button_addPLan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_addPLan.ForeColor = SystemColors.ButtonHighlight;
+            button_addPLan.Location = new Point(210, 407);
+            button_addPLan.Margin = new Padding(3, 2, 3, 2);
+            button_addPLan.Name = "button_addPLan";
+            button_addPLan.Size = new Size(136, 34);
+            button_addPLan.TabIndex = 52;
+            button_addPLan.Text = "Add Plan";
+            button_addPLan.UseVisualStyleBackColor = false;
+            button_addPLan.Click += button_addPLan_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(638, 22);
+            label4.Location = new Point(655, 22);
             label4.Name = "label4";
             label4.Size = new Size(159, 25);
             label4.TabIndex = 53;
             label4.Text = "Enter Duration  :";
             // 
-            // comboBox3
+            // textBox_planTier
             // 
-            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "1-month", "3-months", "6-months", "1-year" });
-            comboBox3.Location = new Point(643, 47);
-            comboBox3.Margin = new Padding(3, 2, 3, 2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(205, 23);
-            comboBox3.TabIndex = 54;
+            textBox_planTier.Location = new Point(424, 49);
+            textBox_planTier.Margin = new Padding(3, 2, 3, 2);
+            textBox_planTier.Name = "textBox_planTier";
+            textBox_planTier.Size = new Size(205, 23);
+            textBox_planTier.TabIndex = 55;
+            textBox_planTier.TextChanged += textBox_Lname_TextChanged;
+            // 
+            // textBox_planDuration
+            // 
+            textBox_planDuration.Location = new Point(655, 49);
+            textBox_planDuration.Margin = new Padding(3, 2, 3, 2);
+            textBox_planDuration.Name = "textBox_planDuration";
+            textBox_planDuration.Size = new Size(205, 23);
+            textBox_planDuration.TabIndex = 56;
+            // 
+            // textBox_planName
+            // 
+            textBox_planName.Location = new Point(210, 49);
+            textBox_planName.Margin = new Padding(3, 2, 3, 2);
+            textBox_planName.Name = "textBox_planName";
+            textBox_planName.Size = new Size(186, 23);
+            textBox_planName.TabIndex = 57;
             // 
             // AddPlan
             // 
@@ -458,16 +454,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(978, 450);
-            Controls.Add(comboBox3);
+            Controls.Add(textBox_planName);
+            Controls.Add(textBox_planDuration);
+            Controls.Add(textBox_planTier);
             Controls.Add(label4);
-            Controls.Add(button12);
-            Controls.Add(ClientdataGridView);
-            Controls.Add(comboBox2);
+            Controls.Add(button_addPLan);
+            Controls.Add(planDataGridView);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(AddPlanExit);
-            Controls.Add(comboBox1);
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -483,7 +479,7 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)planDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -508,16 +504,16 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private ComboBox comboBox1;
         private Button AddPlanExit;
         private Label label1;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox2;
-        private DataGridView ClientdataGridView;
-        private Button button12;
+        private DataGridView planDataGridView;
+        private Button button_addPLan;
         private Label label4;
-        private ComboBox comboBox3;
         private Button button1;
+        private TextBox textBox_planTier;
+        private TextBox textBox_planDuration;
+        private TextBox textBox_planName;
     }
 }
