@@ -38,5 +38,42 @@ namespace gymApp
             adapter.Fill(plansDataTable);
             return plansDataTable;
         }
+
+        public bool updatePlan(int planId, string planName, string planTier, string planDuration)
+        {
+            MySqlCommand command = new MySqlCommand("UPDATE `userplan` SET `name`=@_name,`tier`=@_tier,`duration`=@_duration WHERE `id`=@_id", connect.getConnection);
+            command.Parameters.Add("@_id", MySqlDbType.Int32).Value = planId;
+            command.Parameters.Add("@_name", MySqlDbType.VarChar).Value = planName;
+            command.Parameters.Add("@_tier", MySqlDbType.VarChar).Value = planTier;
+            command.Parameters.Add("@_duration", MySqlDbType.VarChar).Value = planDuration;
+            connect.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.closeConnection();
+                return true;
+            }
+            else
+            {
+                connect.closeConnection();
+                return false;
+            }
+        }
+
+        public bool deletePlan(int planId)
+        {
+            MySqlCommand command = new MySqlCommand("DELETE FROM `userplan` WHERE `id`=@_id", connect.getConnection);
+            command.Parameters.Add("@_id", MySqlDbType.Int32).Value = planId;
+            connect.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.closeConnection();
+                return true;
+            }
+            else
+            {
+                connect.closeConnection();
+                return false;
+            }
+        }
     }
 }

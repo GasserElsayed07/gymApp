@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace gymApp
 {
     public partial class AddPlan : Form
-    {   
+    {
         planClass plan = new planClass();
         public AddPlan()
         {
@@ -167,6 +167,13 @@ namespace gymApp
                 plan.insertPlan(planName, planTier, planDuration);
                 MessageBox.Show("Plan Added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            showData();
+
+        }
+
+        private void planDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

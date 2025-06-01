@@ -130,5 +130,10 @@ namespace gymApp
             PrintProgress.Show();
             this.Hide();
         }
+
+        private void mainPage_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Welcome Coach " + currentSessionUsername.username;
+        }
     }
 }

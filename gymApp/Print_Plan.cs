@@ -4,21 +4,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
+
 
 namespace gymApp
 {
     public partial class Print_Plan : Form
     {
+        planClass plan = new planClass();
+        DGVPrinter printer = new DGVPrinter();
         public Print_Plan()
         {
             InitializeComponent();
             customizeDesign();
         }
 
-
+        #region front-end stuff
         private void button2_Click(object sender, EventArgs e)
         {
             Usercs AddUser = new Usercs();
@@ -122,6 +127,27 @@ namespace gymApp
             mainPage mainPage = new mainPage();
             mainPage.Show();
             this.Hide();
+        }
+
+        #endregion
+        private void Print_Plan_Load(object sender, EventArgs e)
+        {
+            plandataGridViewPrint.DataSource = plan.getPlansList();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            printer.Title = "Plans list";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "GymApp";
+            printer.FooterSpacing = 15;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+            printer.PrintDataGridView(plandataGridViewPrint);
         }
     }
 }

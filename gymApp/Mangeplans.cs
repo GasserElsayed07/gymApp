@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,10 +14,12 @@ namespace gymApp
 {
     public partial class Mangeplans : Form
     {
+        planClass plan = new planClass();
         public Mangeplans()
         {
             InitializeComponent();
             customizeDesign();
+            showData();
         }
         private void customizeDesign()
         {
@@ -24,7 +28,7 @@ namespace gymApp
             progressSubMenu.Visible = false;
         }
 
-
+        #region front-end stuff
         private void usersButton_Click(object sender, EventArgs e)
         {
             showSubMenu(usersSubMenu);
@@ -111,6 +115,93 @@ namespace gymApp
             Print_Progress PrintProgress = new Print_Progress();
             PrintProgress.Show();
             this.Hide();
+        }
+        #endregion
+
+        public void showData()
+        {
+            managePlandataGridView.DataSource = plan.getPlansList();
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mangeplans_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managePlandataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox_managePlanID.Text = managePlandataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            textBox_managePlanName.Text = managePlandataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_managePlanTier.Text = managePlandataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            textBox_managePlanDuration.Text = managePlandataGridView.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            textBox_managePlanID.Clear();
+            textBox_managePlanName.Clear();
+            textBox_managePlanTier.Clear();
+            textBox_managePlanDuration.Clear();
+        }
+
+        private bool verify()
+        {
+            if ((textBox_managePlanName.Text == "") || (textBox_managePlanTier.Text == "") || (textBox_managePlanDuration.Text == ""))
+            {
+                MessageBox.Show("Please fill all fields", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (!int.TryParse(textBox_managePlanID.Text, out id))
+            {
+                MessageBox.Show("Please select a valid plan ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string planName = textBox_managePlanName.Text;
+            string planTier = textBox_managePlanTier.Text;
+            string planDuration = textBox_managePlanDuration.Text;
+            if (verify())
+            {
+                if (plan.updatePlan(id, planName, planTier, planDuration))
+                {
+                    MessageBox.Show("Plan updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update plan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox_managePlanID.Text);
+            if (MessageBox.Show("Are you sure you want to remove this plan", "Remove Plan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (plan.deletePlan(id))
+                {
+                    showData();
+                    MessageBox.Show("Plan Removed", "Remove plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button_Clear.PerformClick();
+                }
+            }
+        }
+
+        private void managePlandataGridView_Click(object sender, EventArgs e)
+        {
+            textBox_managePlanID.Text = managePlandataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            textBox_managePlanName.Text = managePlandataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_managePlanTier.Text = managePlandataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            textBox_managePlanDuration.Text = managePlandataGridView.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 

@@ -154,15 +154,14 @@ namespace gymApp
 
         private void button12_Click(object sender, EventArgs e)
         {
-            //We need DGVprinter helper for print pdf file
-            printer.Title = "Mdemy Students list";
+            printer.Title = "Clients list";
             printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
             printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
-            printer.Footer = "foxlearn";
+            printer.Footer = "GymApp";
             printer.FooterSpacing = 15;
             printer.printDocument.DefaultPageSettings.Landscape = true;
             printer.PrintDataGridView(ClientdataGridViewPrint);

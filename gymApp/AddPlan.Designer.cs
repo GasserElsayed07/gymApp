@@ -387,15 +387,19 @@
             // 
             planDataGridView.AllowUserToAddRows = false;
             planDataGridView.AllowUserToDeleteRows = false;
+            planDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             planDataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             planDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             planDataGridView.Location = new Point(210, 84);
             planDataGridView.Margin = new Padding(3, 2, 3, 2);
             planDataGridView.Name = "planDataGridView";
-            planDataGridView.RowHeadersWidth = 51;
+            planDataGridView.ReadOnly = true;
+            planDataGridView.RowHeadersWidth = 50;
             planDataGridView.RowTemplate.Height = 40;
+            planDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             planDataGridView.Size = new Size(561, 314);
             planDataGridView.TabIndex = 50;
+            planDataGridView.CellContentClick += planDataGridView_CellContentClick;
             // 
             // button_addPLan
             // 

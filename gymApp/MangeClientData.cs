@@ -168,6 +168,7 @@ namespace gymApp
                     if (user.updateUser(id, joinDate, weight, phone, address, joinReason, height))
                     {
                         MessageBox.Show("User updated successfully!", "update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        showData();
                     }
                 }
                 catch (Exception ex)
@@ -238,10 +239,8 @@ namespace gymApp
 
         private void button13_Click(object sender, EventArgs e)
         {
-            //remove the selected Student
             int id = Convert.ToInt32(textBox_manageID.Text);
-            //Show a confirmation message before delete the student
-            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to remove this user", "Remove User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (user.deleteUser(id))
                 {
