@@ -1,6 +1,6 @@
 ﻿namespace gymApp
 {
-    partial class AddPlan
+    partial class Print_Progress
     {
         /// <summary>
         /// Required designer variable.
@@ -46,24 +46,19 @@
             usersButton = new Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            comboBox1 = new ComboBox();
-            AddPlanExit = new Button();
+            MangePlansPageExit = new Button();
+            pictureBox3 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
             ClientdataGridView = new DataGridView();
             button12 = new Button();
-            label4 = new Label();
-            comboBox3 = new ComboBox();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
             usersSubMenu.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -83,7 +78,7 @@
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(202, 600);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 3;
             // 
             // button1
             // 
@@ -93,7 +88,7 @@
             button1.Location = new Point(16, 568);
             button1.Name = "button1";
             button1.Size = new Size(164, 29);
-            button1.TabIndex = 3;
+            button1.TabIndex = 4;
             button1.Text = "Back to Dashboard";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -217,6 +212,7 @@
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // PlansButton
             // 
@@ -339,78 +335,49 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // MangePlansPageExit
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.gymImage1;
-            pictureBox2.ErrorImage = null;
-            pictureBox2.InitialImage = null;
-            pictureBox2.Location = new Point(820, 304);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(912, 597);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 17;
-            pictureBox2.TabStop = false;
+            MangePlansPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            MangePlansPageExit.BackColor = Color.FromArgb(192, 0, 0);
+            MangePlansPageExit.FlatStyle = FlatStyle.Popup;
+            MangePlansPageExit.Location = new Point(1095, 0);
+            MangePlansPageExit.Margin = new Padding(3, 4, 3, 4);
+            MangePlansPageExit.Name = "MangePlansPageExit";
+            MangePlansPageExit.Size = new Size(25, 29);
+            MangePlansPageExit.TabIndex = 53;
+            MangePlansPageExit.Text = "X";
+            MangePlansPageExit.UseVisualStyleBackColor = false;
+            MangePlansPageExit.Click += MangePlansPageExit_Click;
             // 
-            // comboBox1
+            // pictureBox3
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(240, 63);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(177, 28);
-            comboBox1.TabIndex = 18;
-            // 
-            // AddPlanExit
-            // 
-            AddPlanExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            AddPlanExit.BackColor = Color.FromArgb(192, 0, 0);
-            AddPlanExit.FlatStyle = FlatStyle.Popup;
-            AddPlanExit.Location = new Point(1095, 0);
-            AddPlanExit.Margin = new Padding(3, 4, 3, 4);
-            AddPlanExit.Name = "AddPlanExit";
-            AddPlanExit.Size = new Size(25, 29);
-            AddPlanExit.TabIndex = 19;
-            AddPlanExit.Text = "X";
-            AddPlanExit.UseVisualStyleBackColor = false;
-            AddPlanExit.Click += AddPlanExit_Click;
+            pictureBox3.BackgroundImage = Properties.Resources.gymImage1;
+            pictureBox3.ErrorImage = null;
+            pictureBox3.InitialImage = null;
+            pictureBox3.Location = new Point(821, 304);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(299, 296);
+            pictureBox3.TabIndex = 54;
+            pictureBox3.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(233, 29);
+            label1.Location = new Point(221, 43);
             label1.Name = "label1";
             label1.Size = new Size(118, 31);
-            label1.TabIndex = 46;
+            label1.TabIndex = 55;
             label1.Text = "Enter ID  :";
             // 
-            // label2
+            // comboBox1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(367, 155);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 47;
-            label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(452, 29);
-            label3.Name = "label3";
-            label3.Size = new Size(197, 31);
-            label3.TabIndex = 48;
-            label3.Text = "Enter Plan Type  :";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(458, 63);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(234, 28);
-            comboBox2.TabIndex = 49;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(358, 49);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(236, 28);
+            comboBox1.TabIndex = 56;
             // 
             // ClientdataGridView
             // 
@@ -418,74 +385,50 @@
             ClientdataGridView.AllowUserToDeleteRows = false;
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(240, 112);
+            ClientdataGridView.Location = new Point(221, 98);
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
             ClientdataGridView.RowTemplate.Height = 40;
-            ClientdataGridView.Size = new Size(641, 418);
-            ClientdataGridView.TabIndex = 50;
+            ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ClientdataGridView.Size = new Size(649, 415);
+            ClientdataGridView.TabIndex = 57;
             // 
             // button12
             // 
             button12.BackColor = Color.Red;
             button12.FlatStyle = FlatStyle.Popup;
-            button12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(240, 543);
+            button12.Location = new Point(221, 529);
             button12.Name = "button12";
-            button12.Size = new Size(155, 45);
-            button12.TabIndex = 52;
-            button12.Text = "Assign Plan";
+            button12.Size = new Size(156, 45);
+            button12.TabIndex = 58;
+            button12.Text = "Print";
             button12.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(729, 29);
-            label4.Name = "label4";
-            label4.Size = new Size(190, 31);
-            label4.TabIndex = 53;
-            label4.Text = "Enter Duration  :";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(735, 63);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(234, 28);
-            comboBox3.TabIndex = 54;
-            // 
-            // AddPlan
+            // Print_Progress
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
-            Controls.Add(comboBox3);
-            Controls.Add(label4);
             Controls.Add(button12);
             Controls.Add(ClientdataGridView);
-            Controls.Add(comboBox2);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(AddPlanExit);
             Controls.Add(comboBox1);
-            Controls.Add(pictureBox2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox3);
+            Controls.Add(MangePlansPageExit);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "AddPlan";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "AddPlan";
+            Name = "Print_Progress";
+            Text = "Print_Progress";
             panel1.ResumeLayout(false);
             progressSubMenu.ResumeLayout(false);
             plansSubMenu.ResumeLayout(false);
             usersSubMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -494,6 +437,7 @@
         #endregion
 
         private Panel panel1;
+        private Button button1;
         private Panel progressSubMenu;
         private Button button9;
         private Button button11;
@@ -510,17 +454,11 @@
         private Button usersButton;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private ComboBox comboBox1;
-        private Button AddPlanExit;
+        private Button MangePlansPageExit;
+        private PictureBox pictureBox3;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private ComboBox comboBox2;
+        private ComboBox comboBox1;
         private DataGridView ClientdataGridView;
         private Button button12;
-        private Label label4;
-        private ComboBox comboBox3;
-        private Button button1;
     }
 }

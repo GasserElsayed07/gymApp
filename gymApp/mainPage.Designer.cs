@@ -31,7 +31,6 @@
             panel1 = new Panel();
             progressSubMenu = new Panel();
             button9 = new Button();
-            button10 = new Button();
             button11 = new Button();
             ProgressButton = new Button();
             plansSubMenu = new Panel();
@@ -49,7 +48,6 @@
             mainPageExit = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -62,7 +60,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(192, 0, 0);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(progressSubMenu);
             panel1.Controls.Add(ProgressButton);
             panel1.Controls.Add(plansSubMenu);
@@ -80,7 +77,6 @@
             // progressSubMenu
             // 
             progressSubMenu.Controls.Add(button9);
-            progressSubMenu.Controls.Add(button10);
             progressSubMenu.Controls.Add(button11);
             progressSubMenu.Dock = DockStyle.Top;
             progressSubMenu.Location = new Point(0, 408);
@@ -96,28 +92,14 @@
             button9.Dock = DockStyle.Top;
             button9.FlatStyle = FlatStyle.Popup;
             button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(0, 62);
+            button9.Location = new Point(0, 31);
             button9.Margin = new Padding(3, 4, 3, 4);
             button9.Name = "button9";
             button9.Size = new Size(202, 29);
             button9.TabIndex = 2;
             button9.Text = "Print";
             button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            button10.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button10.BackColor = Color.White;
-            button10.Dock = DockStyle.Top;
-            button10.FlatStyle = FlatStyle.Popup;
-            button10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.Location = new Point(0, 31);
-            button10.Margin = new Padding(3, 4, 3, 4);
-            button10.Name = "button10";
-            button10.Size = new Size(202, 31);
-            button10.TabIndex = 1;
-            button10.Text = "Graph of progress";
-            button10.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button11
             // 
@@ -371,19 +353,6 @@
             label1.TabIndex = 17;
             label1.Text = "Welcome Coach Gaber ";
             // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(16, 568);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 29);
-            button1.TabIndex = 4;
-            button1.Text = "Back to Dashboard";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
-            // 
             // mainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -427,12 +396,10 @@
         private Button PlansButton;
         private Panel progressSubMenu;
         private Button button9;
-        private Button button10;
         private Button button11;
         private Button ProgressButton;
         private Button mainPageExit;
         private PictureBox pictureBox2;
         private Label label1;
-        private Button button1;
     }
 }

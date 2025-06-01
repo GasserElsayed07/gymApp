@@ -105,6 +105,13 @@ namespace gymApp
             mainPage.Show();
             this.Hide();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Print_Progress PrintProgress = new Print_Progress();
+            PrintProgress.Show();
+            this.Hide();
+        }
     }
 
 }
