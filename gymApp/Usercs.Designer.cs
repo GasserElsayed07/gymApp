@@ -641,7 +641,9 @@
             // 
             // comboBox_joinReason
             // 
+            comboBox_joinReason.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_joinReason.FormattingEnabled = true;
+            comboBox_joinReason.Items.AddRange(new object[] { "Lose Weight", "Healthy Life ", "Better Fitness" });
             comboBox_joinReason.Location = new Point(567, 256);
             comboBox_joinReason.Name = "comboBox_joinReason";
             comboBox_joinReason.Size = new Size(247, 28);

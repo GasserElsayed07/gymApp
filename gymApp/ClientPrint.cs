@@ -124,5 +124,7 @@ namespace gymApp
             PrintProgress.Show();
             this.Hide();
         }
+
+        
     }
 }

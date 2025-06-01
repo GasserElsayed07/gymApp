@@ -409,7 +409,9 @@
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Sliver Plan ", "Gold Plan ", "Premium Plan" });
             comboBox2.Location = new Point(223, 431);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(236, 28);
@@ -429,6 +431,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "1-month", "3-months", "6-months", "1-year" });
             comboBox3.Location = new Point(223, 496);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(236, 28);

@@ -435,7 +435,9 @@
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Done ", "Not Done", "Rest" });
             comboBox2.Location = new Point(463, 146);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(250, 28);
