@@ -121,5 +121,10 @@ namespace gymApp
             PrintProgress.Show();
             this.Hide();
         }
+
+        private void AddPlan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

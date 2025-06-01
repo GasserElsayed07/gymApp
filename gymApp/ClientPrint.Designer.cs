@@ -362,6 +362,7 @@
             button12.TabIndex = 52;
             button12.Text = "Print";
             button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // label3
             // 

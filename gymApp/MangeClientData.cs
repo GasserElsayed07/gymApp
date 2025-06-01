@@ -83,7 +83,7 @@ namespace gymApp
             ClientdataGridView.DataSource = user.getUsersList();
 
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[11];
+            imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[12];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
         }
@@ -119,7 +119,7 @@ namespace gymApp
         {
             ClientdataGridView.DataSource = user.searchForUser(textBox_search.Text);
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[11];
+            imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[12];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 

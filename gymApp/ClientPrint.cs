@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
+using System.Reflection;
 
 namespace gymApp
 {
     public partial class ClientPrint : Form
     {
         userClass user = new userClass();
+        DGVPrinter printer = new DGVPrinter();
         public ClientPrint()
         {
             InitializeComponent();
@@ -133,7 +136,7 @@ namespace gymApp
             ClientdataGridViewPrint.ReadOnly = true;
             ClientdataGridViewPrint.DataSource = user.getListForPrint(command);
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)ClientdataGridViewPrint.Columns[11];
+            imageColumn = (DataGridViewImageColumn)ClientdataGridViewPrint.Columns[12];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 
@@ -147,6 +150,22 @@ namespace gymApp
         private void ClientPrint_Load(object sender, EventArgs e)
         {
             showData(new MySqlCommand("SELECT * FROM `user` "));
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //We need DGVprinter helper for print pdf file
+            printer.Title = "Mdemy Students list";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "foxlearn";
+            printer.FooterSpacing = 15;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+            printer.PrintDataGridView(ClientdataGridViewPrint);
         }
     }
 }
