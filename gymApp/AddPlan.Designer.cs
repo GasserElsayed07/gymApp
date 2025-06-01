@@ -56,8 +56,9 @@
             label3 = new Label();
             comboBox2 = new ComboBox();
             ClientdataGridView = new DataGridView();
-            Sets_reps_numericUpDown1 = new NumericUpDown();
             button12 = new Button();
+            label4 = new Label();
+            comboBox3 = new ComboBox();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -66,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Sets_reps_numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -233,6 +233,7 @@
             button6.TabIndex = 1;
             button6.Text = "Manage Plans";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -387,7 +388,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(240, 63);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(278, 28);
+            comboBox1.Size = new Size(177, 28);
             comboBox1.TabIndex = 18;
             // 
             // AddPlanExit
@@ -429,18 +430,18 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(541, 29);
+            label3.Location = new Point(452, 29);
             label3.Name = "label3";
-            label3.Size = new Size(236, 31);
+            label3.Size = new Size(197, 31);
             label3.TabIndex = 48;
-            label3.Text = "Enter Exercise Type  :";
+            label3.Text = "Enter Plan Type  :";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(541, 63);
+            comboBox2.Location = new Point(458, 63);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(278, 28);
+            comboBox2.Size = new Size(234, 28);
             comboBox2.TabIndex = 49;
             // 
             // ClientdataGridView
@@ -449,19 +450,12 @@
             ClientdataGridView.AllowUserToDeleteRows = false;
             ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
             ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClientdataGridView.Location = new Point(240, 115);
+            ClientdataGridView.Location = new Point(240, 112);
             ClientdataGridView.Name = "ClientdataGridView";
             ClientdataGridView.RowHeadersWidth = 51;
             ClientdataGridView.RowTemplate.Height = 40;
-            ClientdataGridView.Size = new Size(562, 367);
+            ClientdataGridView.Size = new Size(641, 418);
             ClientdataGridView.TabIndex = 50;
-            // 
-            // Sets_reps_numericUpDown1
-            // 
-            Sets_reps_numericUpDown1.Location = new Point(240, 503);
-            Sets_reps_numericUpDown1.Name = "Sets_reps_numericUpDown1";
-            Sets_reps_numericUpDown1.Size = new Size(111, 27);
-            Sets_reps_numericUpDown1.TabIndex = 51;
             // 
             // button12
             // 
@@ -473,8 +467,27 @@
             button12.Name = "button12";
             button12.Size = new Size(155, 45);
             button12.TabIndex = 52;
-            button12.Text = "Assign Workout";
+            button12.Text = "Assign Plan";
             button12.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(729, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(190, 31);
+            label4.TabIndex = 53;
+            label4.Text = "Enter Duration  :";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(735, 63);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(234, 28);
+            comboBox3.TabIndex = 54;
             // 
             // AddPlan
             // 
@@ -482,8 +495,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
+            Controls.Add(comboBox3);
+            Controls.Add(label4);
             Controls.Add(button12);
-            Controls.Add(Sets_reps_numericUpDown1);
             Controls.Add(ClientdataGridView);
             Controls.Add(comboBox2);
             Controls.Add(label3);
@@ -505,7 +519,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Sets_reps_numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -540,7 +553,8 @@
         private Label label3;
         private ComboBox comboBox2;
         private DataGridView ClientdataGridView;
-        private NumericUpDown Sets_reps_numericUpDown1;
         private Button button12;
+        private Label label4;
+        private ComboBox comboBox3;
     }
 }

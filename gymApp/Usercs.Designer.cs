@@ -63,7 +63,6 @@
             textBox_height = new TextBox();
             textBox_weight = new TextBox();
             textBox_address = new TextBox();
-            comboBox_joinReason = new ComboBox();
             radioButton_male = new RadioButton();
             radioButton_female = new RadioButton();
             dateTimePicker_birth = new DateTimePicker();
@@ -76,6 +75,7 @@
             button_Clear = new Button();
             pictureBox3 = new PictureBox();
             button12 = new Button();
+            comboBox_joinReason = new ComboBox();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -250,6 +250,7 @@
             button6.TabIndex = 1;
             button6.Text = "Manage Plans";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -449,9 +450,9 @@
             label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(563, 219);
             label6.Name = "label6";
-            label6.Size = new Size(144, 31);
+            label6.Size = new Size(75, 31);
             label6.TabIndex = 7;
-            label6.Text = "Joining for :";
+            label6.Text = "Goal :";
             // 
             // label7
             // 
@@ -532,14 +533,6 @@
             textBox_address.Name = "textBox_address";
             textBox_address.Size = new Size(247, 27);
             textBox_address.TabIndex = 17;
-            // 
-            // comboBox_joinReason
-            // 
-            comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(567, 256);
-            comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(247, 28);
-            comboBox_joinReason.TabIndex = 18;
             // 
             // radioButton_male
             // 
@@ -678,6 +671,14 @@
             button12.Text = "Show Clients Data";
             button12.UseVisualStyleBackColor = false;
             // 
+            // comboBox_joinReason
+            // 
+            comboBox_joinReason.FormattingEnabled = true;
+            comboBox_joinReason.Location = new Point(567, 256);
+            comboBox_joinReason.Name = "comboBox_joinReason";
+            comboBox_joinReason.Size = new Size(247, 28);
+            comboBox_joinReason.TabIndex = 18;
+            // 
             // Usercs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -767,7 +768,6 @@
         private TextBox textBox_height;
         private TextBox textBox_weight;
         private TextBox textBox_address;
-        private ComboBox comboBox_joinReason;
         private RadioButton radioButton_male;
         private RadioButton radioButton_female;
         private DateTimePicker dateTimePicker_birth;
@@ -780,5 +780,6 @@
         private Button button_Clear;
         private PictureBox pictureBox3;
         private Button button12;
+        private ComboBox comboBox_joinReason;
     }
 }

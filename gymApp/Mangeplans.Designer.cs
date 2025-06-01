@@ -50,6 +50,16 @@
             pictureBox1 = new PictureBox();
             MangePlansPageExit = new Button();
             pictureBox3 = new PictureBox();
+            ClientdataGridView = new DataGridView();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            comboBox2 = new ComboBox();
+            label4 = new Label();
+            comboBox3 = new ComboBox();
+            button_Clear = new Button();
+            button_update = new Button();
+            button13 = new Button();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -57,6 +67,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -237,6 +248,7 @@
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // PlansButton
             // 
@@ -383,12 +395,132 @@
             pictureBox3.TabIndex = 52;
             pictureBox3.TabStop = false;
             // 
+            // ClientdataGridView
+            // 
+            ClientdataGridView.AllowUserToAddRows = false;
+            ClientdataGridView.AllowUserToDeleteRows = false;
+            ClientdataGridView.BackgroundColor = Color.FromArgb(192, 0, 0);
+            ClientdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ClientdataGridView.Location = new Point(223, 36);
+            ClientdataGridView.Name = "ClientdataGridView";
+            ClientdataGridView.RowHeadersWidth = 51;
+            ClientdataGridView.RowTemplate.Height = 40;
+            ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ClientdataGridView.Size = new Size(874, 250);
+            ClientdataGridView.TabIndex = 53;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(217, 329);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 31);
+            label1.TabIndex = 54;
+            label1.Text = "Enter ID  :";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(223, 363);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(236, 28);
+            comboBox1.TabIndex = 55;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(217, 397);
+            label3.Name = "label3";
+            label3.Size = new Size(135, 31);
+            label3.TabIndex = 56;
+            label3.Text = "Plan Type  :";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(223, 431);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(236, 28);
+            comboBox2.TabIndex = 57;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(217, 462);
+            label4.Name = "label4";
+            label4.Size = new Size(128, 31);
+            label4.TabIndex = 58;
+            label4.Text = "Duration  :";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(223, 496);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(236, 28);
+            comboBox3.TabIndex = 59;
+            // 
+            // button_Clear
+            // 
+            button_Clear.BackColor = Color.Red;
+            button_Clear.FlatStyle = FlatStyle.Popup;
+            button_Clear.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_Clear.ForeColor = SystemColors.ButtonHighlight;
+            button_Clear.Location = new Point(600, 339);
+            button_Clear.Name = "button_Clear";
+            button_Clear.Size = new Size(155, 45);
+            button_Clear.TabIndex = 60;
+            button_Clear.Text = "Clear";
+            button_Clear.UseVisualStyleBackColor = false;
+            // 
+            // button_update
+            // 
+            button_update.BackColor = Color.Red;
+            button_update.FlatStyle = FlatStyle.Popup;
+            button_update.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_update.ForeColor = SystemColors.ButtonHighlight;
+            button_update.Location = new Point(600, 414);
+            button_update.Name = "button_update";
+            button_update.Size = new Size(155, 45);
+            button_update.TabIndex = 61;
+            button_update.Text = "Update";
+            button_update.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            button13.BackColor = Color.Red;
+            button13.FlatStyle = FlatStyle.Popup;
+            button13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button13.ForeColor = SystemColors.ButtonHighlight;
+            button13.Location = new Point(600, 492);
+            button13.Name = "button13";
+            button13.Size = new Size(155, 45);
+            button13.TabIndex = 62;
+            button13.Text = "Delete";
+            button13.UseVisualStyleBackColor = false;
+            // 
             // Mangeplans
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
+            Controls.Add(button13);
+            Controls.Add(button_update);
+            Controls.Add(button_Clear);
+            Controls.Add(comboBox3);
+            Controls.Add(label4);
+            Controls.Add(comboBox2);
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
+            Controls.Add(ClientdataGridView);
             Controls.Add(pictureBox3);
             Controls.Add(MangePlansPageExit);
             Controls.Add(panel1);
@@ -403,7 +535,9 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ClientdataGridView).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -430,5 +564,15 @@
         private PictureBox pictureBox1;
         private Button MangePlansPageExit;
         private PictureBox pictureBox3;
+        private DataGridView ClientdataGridView;
+        private Label label1;
+        private ComboBox comboBox1;
+        private Label label3;
+        private ComboBox comboBox2;
+        private Label label4;
+        private ComboBox comboBox3;
+        private Button button_Clear;
+        private Button button_update;
+        private Button button13;
     }
 }

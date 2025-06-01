@@ -77,6 +77,13 @@ namespace gymApp
         {
             Application.Exit();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddPlan AddPlan = new AddPlan();
+            AddPlan.Show();
+            this.Hide();
+        }
     }
 
 }

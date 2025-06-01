@@ -230,6 +230,7 @@
             button6.TabIndex = 1;
             button6.Text = "Manage Plans";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -409,7 +410,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(243, 439);
+            label3.Location = new Point(222, 439);
             label3.Name = "label3";
             label3.Size = new Size(103, 31);
             label3.TabIndex = 53;
@@ -421,7 +422,7 @@
             radioButton_male.Checked = true;
             radioButton_male.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton_male.ForeColor = SystemColors.ButtonFace;
-            radioButton_male.Location = new Point(425, 439);
+            radioButton_male.Location = new Point(404, 439);
             radioButton_male.Name = "radioButton_male";
             radioButton_male.Size = new Size(86, 32);
             radioButton_male.TabIndex = 54;
@@ -435,7 +436,7 @@
             AllGenderradioButton1.Checked = true;
             AllGenderradioButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AllGenderradioButton1.ForeColor = SystemColors.ButtonFace;
-            AllGenderradioButton1.Location = new Point(353, 439);
+            AllGenderradioButton1.Location = new Point(332, 439);
             AllGenderradioButton1.Name = "AllGenderradioButton1";
             AllGenderradioButton1.Size = new Size(59, 32);
             AllGenderradioButton1.TabIndex = 55;
@@ -448,30 +449,31 @@
             radioButton_female.AutoSize = true;
             radioButton_female.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton_female.ForeColor = SystemColors.ButtonFace;
-            radioButton_female.Location = new Point(514, 440);
+            radioButton_female.Location = new Point(493, 440);
             radioButton_female.Name = "radioButton_female";
             radioButton_female.Size = new Size(100, 32);
             radioButton_female.TabIndex = 56;
             radioButton_female.Text = "Female";
             radioButton_female.UseVisualStyleBackColor = true;
+            
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(736, 441);
+            label6.Location = new Point(700, 441);
             label6.Name = "label6";
-            label6.Size = new Size(144, 31);
+            label6.Size = new Size(75, 31);
             label6.TabIndex = 57;
-            label6.Text = "Joining for :";
+            label6.Text = "Goal :";
             // 
             // comboBox_joinReason
             // 
             comboBox_joinReason.FormattingEnabled = true;
-            comboBox_joinReason.Location = new Point(893, 445);
+            comboBox_joinReason.Location = new Point(795, 445);
             comboBox_joinReason.Name = "comboBox_joinReason";
-            comboBox_joinReason.Size = new Size(195, 28);
+            comboBox_joinReason.Size = new Size(295, 28);
             comboBox_joinReason.TabIndex = 58;
             // 
             // ClientPrint

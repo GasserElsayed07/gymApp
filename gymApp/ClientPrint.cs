@@ -87,5 +87,14 @@ namespace gymApp
             this.Hide();
 
         }
+
+        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Mangeplans MangePlans = new Mangeplans();
+            MangePlans.Show();
+            this.Hide();
+        }
     }
 }
