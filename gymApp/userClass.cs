@@ -49,8 +49,11 @@ namespace gymApp
         {
 
             MySqlCommand command = new MySqlCommand("SELECT * FROM `user`", connect.getConnection);
+
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
             DataTable dataTable = new DataTable();
+
             adapter.Fill(dataTable);
             return dataTable;
   
@@ -99,6 +102,27 @@ namespace gymApp
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             return dataTable;
+        }
+
+        public bool deleteUser(int id)
+        {
+            MySqlCommand command = new MySqlCommand("DELETE FROM `user` WHERE `userID`=@id", connect.getConnection);
+
+            //@id
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+
+            connect.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.closeConnection();
+                return true;
+            }
+            else
+            {
+                connect.closeConnection();
+                return false;
+            }
+
         }
     }
 }

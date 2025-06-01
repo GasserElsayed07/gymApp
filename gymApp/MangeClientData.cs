@@ -81,6 +81,7 @@ namespace gymApp
         private void showData()
         {
             ClientdataGridView.DataSource = user.getUsersList();
+
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[11];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -233,6 +234,22 @@ namespace gymApp
             Print_Progress PrintProgress = new Print_Progress();
             PrintProgress.Show();
             this.Hide();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //remove the selected Student
+            int id = Convert.ToInt32(textBox_manageID.Text);
+            //Show a confirmation message before delete the student
+            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (user.deleteUser(id))
+                {
+                    showData();
+                    MessageBox.Show("User Removed", "Remove user", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button_Clear.PerformClick();
+                }
+            }
         }
     }
 }
