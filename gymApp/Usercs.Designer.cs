@@ -31,16 +31,14 @@
             panel1 = new Panel();
             button1 = new Button();
             progressSubMenu = new Panel();
-            button9 = new Button();
-            button11 = new Button();
+            button8 = new Button();
+            button3 = new Button();
             ProgressButton = new Button();
             plansSubMenu = new Panel();
-            button5 = new Button();
             button6 = new Button();
             button7 = new Button();
             PlansButton = new Button();
             usersSubMenu = new Panel();
-            button4 = new Button();
             MangeClientDataButton = new Button();
             button2 = new Button();
             usersButton = new Button();
@@ -74,6 +72,7 @@
             pictureBox3 = new PictureBox();
             comboBox_joinReason = new ComboBox();
             comboBox1 = new ComboBox();
+            label11 = new Label();
             panel1.SuspendLayout();
             progressSubMenu.SuspendLayout();
             plansSubMenu.SuspendLayout();
@@ -117,46 +116,46 @@
             // 
             // progressSubMenu
             // 
-            progressSubMenu.Controls.Add(button9);
-            progressSubMenu.Controls.Add(button11);
+            progressSubMenu.Controls.Add(button8);
+            progressSubMenu.Controls.Add(button3);
             progressSubMenu.Dock = DockStyle.Top;
-            progressSubMenu.Location = new Point(0, 408);
+            progressSubMenu.Location = new Point(0, 353);
             progressSubMenu.Margin = new Padding(3, 4, 3, 4);
             progressSubMenu.Name = "progressSubMenu";
             progressSubMenu.Size = new Size(202, 91);
             progressSubMenu.TabIndex = 6;
             // 
-            // button9
+            // button8
             // 
-            button9.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button9.BackColor = Color.White;
-            button9.Dock = DockStyle.Top;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(0, 31);
-            button9.Margin = new Padding(3, 4, 3, 4);
-            button9.Name = "button9";
-            button9.Size = new Size(202, 29);
-            button9.TabIndex = 2;
-            button9.Text = "Print";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            button8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button8.BackColor = Color.White;
+            button8.Dock = DockStyle.Top;
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.Location = new Point(0, 29);
+            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Name = "button8";
+            button8.Size = new Size(202, 29);
+            button8.TabIndex = 4;
+            button8.Text = "Print Plans";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
-            // button11
+            // button3
             // 
-            button11.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button11.BackColor = Color.White;
-            button11.Dock = DockStyle.Top;
-            button11.FlatStyle = FlatStyle.Popup;
-            button11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.Location = new Point(0, 0);
-            button11.Margin = new Padding(3, 4, 3, 4);
-            button11.Name = "button11";
-            button11.Size = new Size(202, 31);
-            button11.TabIndex = 0;
-            button11.Text = "Add new progress";
-            button11.UseVisualStyleBackColor = false;
-            button11.Click += button11_Click;
+            button3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button3.BackColor = Color.White;
+            button3.Dock = DockStyle.Top;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Location = new Point(0, 0);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(202, 29);
+            button3.TabIndex = 3;
+            button3.Text = "Print Clients Info";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // ProgressButton
             // 
@@ -166,43 +165,26 @@
             ProgressButton.FlatStyle = FlatStyle.Popup;
             ProgressButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProgressButton.ForeColor = SystemColors.ControlLightLight;
-            ProgressButton.Location = new Point(0, 377);
+            ProgressButton.Location = new Point(0, 322);
             ProgressButton.Margin = new Padding(3, 4, 3, 4);
             ProgressButton.Name = "ProgressButton";
             ProgressButton.Size = new Size(202, 31);
             ProgressButton.TabIndex = 5;
-            ProgressButton.Text = "Progress Tracking";
+            ProgressButton.Text = "Print";
             ProgressButton.TextAlign = ContentAlignment.MiddleLeft;
             ProgressButton.UseVisualStyleBackColor = false;
             ProgressButton.Click += ProgressButton_Click;
             // 
             // plansSubMenu
             // 
-            plansSubMenu.Controls.Add(button5);
             plansSubMenu.Controls.Add(button6);
             plansSubMenu.Controls.Add(button7);
             plansSubMenu.Dock = DockStyle.Top;
-            plansSubMenu.Location = new Point(0, 286);
+            plansSubMenu.Location = new Point(0, 258);
             plansSubMenu.Margin = new Padding(3, 4, 3, 4);
             plansSubMenu.Name = "plansSubMenu";
-            plansSubMenu.Size = new Size(202, 91);
+            plansSubMenu.Size = new Size(202, 64);
             plansSubMenu.TabIndex = 4;
-            // 
-            // button5
-            // 
-            button5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button5.BackColor = Color.White;
-            button5.Dock = DockStyle.Top;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(0, 62);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(202, 29);
-            button5.TabIndex = 2;
-            button5.Text = "Print";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -244,7 +226,7 @@
             PlansButton.FlatStyle = FlatStyle.Popup;
             PlansButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PlansButton.ForeColor = SystemColors.ButtonHighlight;
-            PlansButton.Location = new Point(0, 255);
+            PlansButton.Location = new Point(0, 227);
             PlansButton.Margin = new Padding(3, 4, 3, 4);
             PlansButton.Name = "PlansButton";
             PlansButton.Size = new Size(202, 31);
@@ -256,31 +238,14 @@
             // 
             // usersSubMenu
             // 
-            usersSubMenu.Controls.Add(button4);
             usersSubMenu.Controls.Add(MangeClientDataButton);
             usersSubMenu.Controls.Add(button2);
             usersSubMenu.Dock = DockStyle.Top;
             usersSubMenu.Location = new Point(0, 164);
             usersSubMenu.Margin = new Padding(3, 4, 3, 4);
             usersSubMenu.Name = "usersSubMenu";
-            usersSubMenu.Size = new Size(202, 91);
+            usersSubMenu.Size = new Size(202, 63);
             usersSubMenu.TabIndex = 2;
-            // 
-            // button4
-            // 
-            button4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button4.BackColor = Color.White;
-            button4.Dock = DockStyle.Top;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(0, 62);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(202, 29);
-            button4.TabIndex = 2;
-            button4.Text = "Print Clients Info";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // MangeClientDataButton
             // 
@@ -641,11 +606,21 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "4 month", "6 month", "3 + 2 month (summer offer)" });
-            comboBox1.Location = new Point(399, 392);
+            comboBox1.Location = new Point(352, 411);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(247, 28);
+            comboBox1.Size = new Size(340, 28);
             comboBox1.TabIndex = 31;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = SystemColors.ButtonFace;
+            label11.Location = new Point(347, 377);
+            label11.Name = "label11";
+            label11.Size = new Size(129, 31);
+            label11.TabIndex = 32;
+            label11.Text = "Plan Type :";
             // 
             // Usercs
             // 
@@ -653,6 +628,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1118, 600);
+            Controls.Add(label11);
             Controls.Add(comboBox1);
             Controls.Add(button_Clear);
             Controls.Add(button_Add);
@@ -703,16 +679,12 @@
 
         private Panel panel1;
         private Panel progressSubMenu;
-        private Button button9;
-        private Button button11;
         private Button ProgressButton;
         private Panel plansSubMenu;
-        private Button button5;
         private Button button6;
         private Button button7;
         private Button PlansButton;
         private Panel usersSubMenu;
-        private Button button4;
         private Button MangeClientDataButton;
         private Button button2;
         private Button usersButton;
@@ -747,5 +719,8 @@
         private ComboBox comboBox_joinReason;
         private Button button1;
         private ComboBox comboBox1;
+        private Button button8;
+        private Button button3;
+        private Label label11;
     }
 }

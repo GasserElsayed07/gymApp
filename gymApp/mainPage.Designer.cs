@@ -30,16 +30,14 @@
         {
             panel1 = new Panel();
             progressSubMenu = new Panel();
-            button9 = new Button();
-            button11 = new Button();
+            button8 = new Button();
+            PrintClientbutton = new Button();
             ProgressButton = new Button();
             plansSubMenu = new Panel();
-            button5 = new Button();
             button6 = new Button();
             button7 = new Button();
             PlansButton = new Button();
             usersSubMenu = new Panel();
-            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             usersButton = new Button();
@@ -69,49 +67,52 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(177, 450);
+            panel1.Size = new Size(202, 600);
             panel1.TabIndex = 0;
             // 
             // progressSubMenu
             // 
-            progressSubMenu.Controls.Add(button9);
-            progressSubMenu.Controls.Add(button11);
+            progressSubMenu.Controls.Add(button8);
+            progressSubMenu.Controls.Add(PrintClientbutton);
             progressSubMenu.Dock = DockStyle.Top;
-            progressSubMenu.Location = new Point(0, 305);
+            progressSubMenu.Location = new Point(0, 348);
+            progressSubMenu.Margin = new Padding(3, 4, 3, 4);
             progressSubMenu.Name = "progressSubMenu";
-            progressSubMenu.Size = new Size(177, 68);
+            progressSubMenu.Size = new Size(202, 91);
             progressSubMenu.TabIndex = 6;
             // 
-            // button9
+            // button8
             // 
-            button9.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button9.BackColor = Color.White;
-            button9.Dock = DockStyle.Top;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(0, 23);
-            button9.Name = "button9";
-            button9.Size = new Size(177, 22);
-            button9.TabIndex = 2;
-            button9.Text = "Print";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            button8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button8.BackColor = Color.White;
+            button8.Dock = DockStyle.Top;
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.Location = new Point(0, 29);
+            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Name = "button8";
+            button8.Size = new Size(202, 29);
+            button8.TabIndex = 4;
+            button8.Text = "Print";
+            button8.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // PrintClientbutton
             // 
-            button11.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button11.BackColor = Color.White;
-            button11.Dock = DockStyle.Top;
-            button11.FlatStyle = FlatStyle.Popup;
-            button11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.Location = new Point(0, 0);
-            button11.Name = "button11";
-            button11.Size = new Size(177, 23);
-            button11.TabIndex = 0;
-            button11.Text = "Add new progress";
-            button11.UseVisualStyleBackColor = false;
-            button11.Click += button11_Click;
+            PrintClientbutton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PrintClientbutton.BackColor = Color.White;
+            PrintClientbutton.Dock = DockStyle.Top;
+            PrintClientbutton.FlatStyle = FlatStyle.Popup;
+            PrintClientbutton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PrintClientbutton.Location = new Point(0, 0);
+            PrintClientbutton.Margin = new Padding(3, 4, 3, 4);
+            PrintClientbutton.Name = "PrintClientbutton";
+            PrintClientbutton.Size = new Size(202, 29);
+            PrintClientbutton.TabIndex = 3;
+            PrintClientbutton.Text = "Print Client Info";
+            PrintClientbutton.UseVisualStyleBackColor = false;
+            PrintClientbutton.Click += PrintClientbutton_Click;
             // 
             // ProgressButton
             // 
@@ -121,40 +122,26 @@
             ProgressButton.FlatStyle = FlatStyle.Popup;
             ProgressButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProgressButton.ForeColor = SystemColors.ControlLightLight;
-            ProgressButton.Location = new Point(0, 282);
+            ProgressButton.Location = new Point(0, 317);
+            ProgressButton.Margin = new Padding(3, 4, 3, 4);
             ProgressButton.Name = "ProgressButton";
-            ProgressButton.Size = new Size(177, 23);
+            ProgressButton.Size = new Size(202, 31);
             ProgressButton.TabIndex = 5;
-            ProgressButton.Text = "Progress Tracking";
+            ProgressButton.Text = "Print";
             ProgressButton.TextAlign = ContentAlignment.MiddleLeft;
             ProgressButton.UseVisualStyleBackColor = false;
             ProgressButton.Click += ProgressButton_Click;
             // 
             // plansSubMenu
             // 
-            plansSubMenu.Controls.Add(button5);
             plansSubMenu.Controls.Add(button6);
             plansSubMenu.Controls.Add(button7);
             plansSubMenu.Dock = DockStyle.Top;
-            plansSubMenu.Location = new Point(0, 214);
+            plansSubMenu.Location = new Point(0, 255);
+            plansSubMenu.Margin = new Padding(3, 4, 3, 4);
             plansSubMenu.Name = "plansSubMenu";
-            plansSubMenu.Size = new Size(177, 68);
+            plansSubMenu.Size = new Size(202, 62);
             plansSubMenu.TabIndex = 4;
-            // 
-            // button5
-            // 
-            button5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button5.BackColor = Color.White;
-            button5.Dock = DockStyle.Top;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(0, 46);
-            button5.Name = "button5";
-            button5.Size = new Size(177, 22);
-            button5.TabIndex = 2;
-            button5.Text = "Print";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -163,9 +150,10 @@
             button6.Dock = DockStyle.Top;
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(0, 23);
+            button6.Location = new Point(0, 31);
+            button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
-            button6.Size = new Size(177, 23);
+            button6.Size = new Size(202, 31);
             button6.TabIndex = 1;
             button6.Text = "Manage Plans";
             button6.UseVisualStyleBackColor = false;
@@ -179,8 +167,9 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.Location = new Point(0, 0);
+            button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(177, 23);
+            button7.Size = new Size(202, 31);
             button7.TabIndex = 0;
             button7.Text = "Add Plan";
             button7.UseVisualStyleBackColor = false;
@@ -194,9 +183,10 @@
             PlansButton.FlatStyle = FlatStyle.Popup;
             PlansButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PlansButton.ForeColor = SystemColors.ButtonHighlight;
-            PlansButton.Location = new Point(0, 191);
+            PlansButton.Location = new Point(0, 224);
+            PlansButton.Margin = new Padding(3, 4, 3, 4);
             PlansButton.Name = "PlansButton";
-            PlansButton.Size = new Size(177, 23);
+            PlansButton.Size = new Size(202, 31);
             PlansButton.TabIndex = 3;
             PlansButton.Text = "Plans";
             PlansButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -205,29 +195,14 @@
             // 
             // usersSubMenu
             // 
-            usersSubMenu.Controls.Add(button4);
             usersSubMenu.Controls.Add(button3);
             usersSubMenu.Controls.Add(button2);
             usersSubMenu.Dock = DockStyle.Top;
-            usersSubMenu.Location = new Point(0, 123);
+            usersSubMenu.Location = new Point(0, 164);
+            usersSubMenu.Margin = new Padding(3, 4, 3, 4);
             usersSubMenu.Name = "usersSubMenu";
-            usersSubMenu.Size = new Size(177, 68);
+            usersSubMenu.Size = new Size(202, 60);
             usersSubMenu.TabIndex = 2;
-            // 
-            // button4
-            // 
-            button4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button4.BackColor = Color.White;
-            button4.Dock = DockStyle.Top;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(0, 46);
-            button4.Name = "button4";
-            button4.Size = new Size(177, 22);
-            button4.TabIndex = 2;
-            button4.Text = "Print Client Info";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -236,9 +211,10 @@
             button3.Dock = DockStyle.Top;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(0, 23);
+            button3.Location = new Point(0, 31);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(177, 23);
+            button3.Size = new Size(202, 31);
             button3.TabIndex = 1;
             button3.Text = "Manage Clients Data ";
             button3.UseVisualStyleBackColor = false;
@@ -253,8 +229,9 @@
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ControlText;
             button2.Location = new Point(0, 0);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(177, 23);
+            button2.Size = new Size(202, 31);
             button2.TabIndex = 0;
             button2.Text = "Add New Client  ";
             button2.UseVisualStyleBackColor = false;
@@ -270,9 +247,10 @@
             usersButton.FlatStyle = FlatStyle.Popup;
             usersButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             usersButton.ForeColor = SystemColors.Control;
-            usersButton.Location = new Point(0, 100);
+            usersButton.Location = new Point(0, 133);
+            usersButton.Margin = new Padding(3, 4, 3, 4);
             usersButton.Name = "usersButton";
-            usersButton.Size = new Size(177, 23);
+            usersButton.Size = new Size(202, 31);
             usersButton.TabIndex = 1;
             usersButton.Text = "Clients ";
             usersButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -284,8 +262,9 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(177, 100);
+            panel2.Size = new Size(202, 133);
             panel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -294,9 +273,8 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.King_bodybuilding_and_gym_logo_vector_image_Png;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 100);
+            pictureBox1.Size = new Size(202, 133);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -306,9 +284,10 @@
             mainPageExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             mainPageExit.BackColor = Color.FromArgb(192, 0, 0);
             mainPageExit.FlatStyle = FlatStyle.Popup;
-            mainPageExit.Location = new Point(958, 0);
+            mainPageExit.Location = new Point(1095, 0);
+            mainPageExit.Margin = new Padding(3, 4, 3, 4);
             mainPageExit.Name = "mainPageExit";
-            mainPageExit.Size = new Size(22, 22);
+            mainPageExit.Size = new Size(25, 29);
             mainPageExit.TabIndex = 15;
             mainPageExit.Text = "X";
             mainPageExit.UseVisualStyleBackColor = false;
@@ -319,8 +298,7 @@
             pictureBox2.BackgroundImage = Properties.Resources.gymImage1;
             pictureBox2.ErrorImage = null;
             pictureBox2.InitialImage = null;
-            pictureBox2.Location = new Point(718, 228);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(821, 304);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(912, 597);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -332,23 +310,24 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(182, 7);
+            label1.Location = new Point(208, 9);
             label1.Name = "label1";
-            label1.Size = new Size(433, 51);
+            label1.Size = new Size(535, 62);
             label1.TabIndex = 17;
             label1.Text = "Welcome Coach Gaber ";
             // 
             // mainPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(978, 450);
+            ClientSize = new Size(1118, 600);
             Controls.Add(label1);
             Controls.Add(mainPageExit);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "mainPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "mainPage";
@@ -370,21 +349,19 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Panel usersSubMenu;
-        private Button button4;
         private Button button3;
         private Button button2;
         private Button usersButton;
         private Panel plansSubMenu;
-        private Button button5;
         private Button button6;
         private Button button7;
         private Button PlansButton;
         private Panel progressSubMenu;
-        private Button button9;
-        private Button button11;
         private Button ProgressButton;
         private Button mainPageExit;
         private PictureBox pictureBox2;
         private Label label1;
+        private Button button8;
+        private Button PrintClientbutton;
     }
 }

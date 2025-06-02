@@ -90,12 +90,12 @@ namespace gymApp
 
         private void ClientdataGridView_Click(object sender, EventArgs e)
         {
-            
+
             dateTimePicker_manageJoinDate.Value = Convert.ToDateTime(ClientdataGridView.CurrentRow.Cells[4].Value);
             textBox_manageWeight.Text = ClientdataGridView.CurrentRow.Cells[5].Value.ToString();
             textBox_managePhone.Text = ClientdataGridView.CurrentRow.Cells[6].Value.ToString();
             textBox_manageAddress.Text = ClientdataGridView.CurrentRow.Cells[7].Value.ToString();
-            comboBox_manageJoinReason.Text = ClientdataGridView.CurrentRow.Cells[9].Value.ToString();
+           
             textBox_manageHeight.Text = ClientdataGridView.CurrentRow.Cells[10].Value.ToString();
         }
 
@@ -110,7 +110,7 @@ namespace gymApp
             textBox_manageWeight.Clear();
             textBox_managePhone.Clear();
             textBox_manageAddress.Clear();
-            comboBox_manageJoinReason.SelectedIndex = -1;
+           
             textBox_manageHeight.Clear();
 
         }
@@ -125,7 +125,7 @@ namespace gymApp
 
         bool verify()
         {
-            if ((textBox_managePhone.Text == "") || (textBox_manageWeight.Text == "") || (textBox_manageHeight.Text == "") || (textBox_manageAddress.Text == "") || (comboBox_manageJoinReason.Text == ""))
+            if ((textBox_managePhone.Text == "") || (textBox_manageWeight.Text == "") || (textBox_manageHeight.Text == "") || (textBox_manageAddress.Text == "") )
             {
                 MessageBox.Show("Please fill all the fields");
                 return false;
@@ -158,7 +158,7 @@ namespace gymApp
                 return;
             }
             string address = textBox_manageAddress.Text;
-            string joinReason = comboBox_manageJoinReason.Text;
+            string joinReason = "";
 
             if (verify())
             {
@@ -188,12 +188,7 @@ namespace gymApp
             Application.Exit();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
+    
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -209,19 +204,8 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Print_Plan PrintPlan = new Print_Plan();
-            PrintPlan.Show();
-            this.Hide();
-        }
+     
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -230,12 +214,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
+
 
         private void button13_Click(object sender, EventArgs e)
         {
@@ -251,13 +230,22 @@ namespace gymApp
             }
         }
 
-        private void ClientdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+
+
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
         }
 
-        private void MangeClientData_Load(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
 
         }
     }

@@ -78,12 +78,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
+
 
         private void AddPlanExit_Click(object sender, EventArgs e)
         {
@@ -97,20 +92,9 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Print_Plan PrintPlan = new Print_Plan();
-            PrintPlan.Show();
-            this.Hide();
-        }
+     
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -119,28 +103,13 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
+
         #endregion
-        private void AddPlan_Load(object sender, EventArgs e)
-        {
+      
 
-        }
+    
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Lname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+  
         public void showData()
         {
             planDataGridView.DataSource = plan.GetList();
@@ -172,9 +141,19 @@ namespace gymApp
 
         }
 
-        private void planDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        private void button8_Click(object sender, EventArgs e)
         {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
+        }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
         }
     }
 }

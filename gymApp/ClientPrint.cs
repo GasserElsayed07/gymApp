@@ -42,9 +42,9 @@ namespace gymApp
         }
         private void customizeDesign()
         {
-            usersSubMenu.Visible = true;
+            usersSubMenu.Visible = false;
             plansSubMenu.Visible = false;
-            progressSubMenu.Visible = false;
+            progressSubMenu.Visible = true;
         }
         private void hideSubMenu()
         {
@@ -111,12 +111,6 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -125,12 +119,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
+
 
         private void showData(MySqlCommand command)
         {
@@ -170,14 +159,14 @@ namespace gymApp
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string selectedQuery="";
+            string selectedQuery = "";
             if (AllGenderradioButton1.Checked)
             {
                 selectedQuery = "SELECT * FROM `user` ";
             }
             else if (MaleradioButton.Checked)
             {
-                    selectedQuery = "SELECT * FROM `user` WHERE `userGender`= 'Male' ";
+                selectedQuery = "SELECT * FROM `user` WHERE `userGender`= 'Male' ";
             }
             else if (radioButton_female.Checked)
             {
@@ -186,6 +175,14 @@ namespace gymApp
             }
             showData(new MySqlCommand(selectedQuery));
         }
-       
+
+     
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
+        }
     }
 }

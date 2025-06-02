@@ -38,12 +38,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
+        
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -61,8 +56,8 @@ namespace gymApp
         private void customizeDesign()
         {
             usersSubMenu.Visible = false;
-            plansSubMenu.Visible = true;
-            progressSubMenu.Visible = false;
+            plansSubMenu.Visible = false;
+            progressSubMenu.Visible = true;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -108,19 +103,8 @@ namespace gymApp
             Application.Exit();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -148,6 +132,13 @@ namespace gymApp
             printer.FooterSpacing = 15;
             printer.printDocument.DefaultPageSettings.Landscape = true;
             printer.PrintDataGridView(plandataGridViewPrint);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
         }
     }
 }

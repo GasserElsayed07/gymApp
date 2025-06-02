@@ -96,12 +96,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -110,31 +105,18 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
+
         #endregion
 
         public void showData()
         {
             managePlandataGridView.DataSource = plan.GetList();
         }
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Mangeplans_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void managePlandataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_managePlanID.Text = managePlandataGridView.SelectedRows[0].Cells[0].Value.ToString();
+
             textBox_managePlanName.Text = managePlandataGridView.SelectedRows[0].Cells[1].Value.ToString();
             textBox_managePlanTier.Text = managePlandataGridView.SelectedRows[0].Cells[2].Value.ToString();
             textBox_managePlanDuration.Text = managePlandataGridView.SelectedRows[0].Cells[3].Value.ToString();
@@ -142,7 +124,7 @@ namespace gymApp
 
         private void button_Clear_Click(object sender, EventArgs e)
         {
-            textBox_managePlanID.Clear();
+
             textBox_managePlanName.Clear();
             textBox_managePlanTier.Clear();
             textBox_managePlanDuration.Clear();
@@ -160,7 +142,7 @@ namespace gymApp
         private void button_update_Click(object sender, EventArgs e)
         {
             int id;
-            if (!int.TryParse(textBox_managePlanID.Text, out id))
+            if (true)
             {
                 MessageBox.Show("Please select a valid plan ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -184,7 +166,7 @@ namespace gymApp
 
         private void button13_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox_managePlanID.Text);
+            int id = 0;
             if (MessageBox.Show("Are you sure you want to remove this plan", "Remove Plan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (plan.deleteById(id))
@@ -198,10 +180,35 @@ namespace gymApp
 
         private void managePlandataGridView_Click(object sender, EventArgs e)
         {
-            textBox_managePlanID.Text = managePlandataGridView.SelectedRows[0].Cells[0].Value.ToString();
+
             textBox_managePlanName.Text = managePlandataGridView.SelectedRows[0].Cells[1].Value.ToString();
             textBox_managePlanTier.Text = managePlandataGridView.SelectedRows[0].Cells[2].Value.ToString();
             textBox_managePlanDuration.Text = managePlandataGridView.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
+
+        }
+
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(progressSubMenu);
+        }
+
+        private void PlansButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(plansSubMenu);
         }
     }
 

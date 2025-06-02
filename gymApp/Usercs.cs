@@ -193,12 +193,6 @@ namespace gymApp
             populatePlansComboBox();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClientPrint Clientprinnt = new ClientPrint();
-            Clientprinnt.Show();
-            this.Hide();
-        }
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -221,12 +215,7 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            ADDProgress AddProgress = new ADDProgress();
-            AddProgress.Show();
-            this.Hide();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -235,17 +224,9 @@ namespace gymApp
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Print_Progress PrintProgress = new Print_Progress();
-            PrintProgress.Show();
-            this.Hide();
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void populatePlansComboBox()
         {
@@ -265,6 +246,21 @@ namespace gymApp
             {
                 comboBox1.SelectedIndex = 0; // Optional: select first item
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            ClientPrint Clientprinnt = new ClientPrint();
+            Clientprinnt.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Print_Plan PrintPlan = new Print_Plan();
+            PrintPlan.Show();
+            this.Hide();
         }
     }
 }
