@@ -15,9 +15,9 @@ namespace gymApp
     {
         
         public bool insertUser(string Fname, string Lname, DateTime bdDate, DateTime joinDate, int weight,
-            string phone, string address, string gender, string joinReason, int height, byte[] image)
+            string phone, string address, string gender, string joinReason, int height, string plan, byte[] image)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `user`(`userFirstName`, `userLastName`, `userBirthDate`, `userJoinDate`, `userWeight`, `userPhone`, `userAddress`, `userGender`, `userJoinReason`, `userHeight`, `userImage`) VALUES(@Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image)",connect.getConnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `user`(`userFirstName`, `userLastName`, `userBirthDate`, `userJoinDate`, `userWeight`, `userPhone`, `userAddress`, `userGender`, `userJoinReason`, `userHeight`, `userPlan`,  `userImage`) VALUES(@Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @plan, @image)", connect.getConnection);
             // @Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image
             command.Parameters.Add("@Fname", MySqlDbType.VarChar).Value = Fname;
             command.Parameters.Add("@Lname", MySqlDbType.VarChar).Value = Lname;
@@ -29,6 +29,7 @@ namespace gymApp
             command.Parameters.Add("@gender", MySqlDbType.VarString).Value = gender;
             command.Parameters.Add("@Jreason", MySqlDbType.VarChar).Value = joinReason;
             command.Parameters.Add("@height", MySqlDbType.Int32).Value = height;
+            command.Parameters.Add("@plan", MySqlDbType.VarChar).Value = plan;
             command.Parameters.Add("@image", MySqlDbType.Blob).Value = image;
             connect.openConnection();
 

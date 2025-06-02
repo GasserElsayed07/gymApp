@@ -116,6 +116,7 @@ namespace gymApp
             byte[] image = memoryStream.ToArray();
             int birthYear = dateTimePicker_birth.Value.Year;
             int currentYear = DateTime.Now.Year;
+            string plan = comboBox1.SelectedItem.ToString();
             if (currentYear - birthYear < 18)
             {
                 MessageBox.Show("You must be at least 18 years old to join the gym.");
@@ -126,7 +127,7 @@ namespace gymApp
                 try
                 {
 
-                    if (user.insertUser(Fname, Lname, bdDate, joinDate, weight, phone, address, gender, joinReason, height, image))
+                    if (user.insertUser(Fname, Lname, bdDate, joinDate, weight, phone, address, gender, joinReason, height, plan, image))
                     {
                         MessageBox.Show("User added successfully!", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

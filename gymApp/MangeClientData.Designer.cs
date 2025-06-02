@@ -324,6 +324,7 @@
             ClientdataGridView.Location = new Point(195, 27);
             ClientdataGridView.Margin = new Padding(3, 2, 3, 2);
             ClientdataGridView.Name = "ClientdataGridView";
+            ClientdataGridView.ReadOnly = true;
             ClientdataGridView.RowHeadersWidth = 51;
             ClientdataGridView.RowTemplate.Height = 40;
             ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

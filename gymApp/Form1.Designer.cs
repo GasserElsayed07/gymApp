@@ -46,7 +46,6 @@
             pictureBox5 = new PictureBox();
             textBox_password = new TextBox();
             button1 = new Button();
-            button_minimize = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -211,26 +210,12 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // button_minimize
-            // 
-            button_minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button_minimize.BackColor = Color.RosyBrown;
-            button_minimize.FlatStyle = FlatStyle.Flat;
-            button_minimize.Location = new Point(395, -1);
-            button_minimize.Name = "button_minimize";
-            button_minimize.Size = new Size(22, 22);
-            button_minimize.TabIndex = 15;
-            button_minimize.Text = "-";
-            button_minimize.UseVisualStyleBackColor = false;
-            button_minimize.Click += button_minimize_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(438, 525);
-            Controls.Add(button_minimize);
             Controls.Add(button1);
             Controls.Add(textBox_password);
             Controls.Add(pictureBox5);
@@ -272,6 +257,5 @@
         private PictureBox pictureBox5;
         private TextBox textBox_password;
         private Button button1;
-        private Button button_minimize;
     }
 }

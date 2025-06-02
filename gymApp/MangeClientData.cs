@@ -99,6 +99,7 @@ namespace gymApp
             textBox_manageAddress.Text = ClientdataGridView.CurrentRow.Cells[7].Value.ToString();
 
             textBox_manageHeight.Text = ClientdataGridView.CurrentRow.Cells[10].Value.ToString();
+            comboBox_manageUserPlan.SelectedItem = ClientdataGridView.CurrentRow.Cells[11].Value.ToString();
         }
 
         private void ClientdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
