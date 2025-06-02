@@ -190,7 +190,7 @@ namespace gymApp
 
         private void Usercs_Load(object sender, EventArgs e)
         {
-            populatePlansComboBox();
+            fillPlansComboBox();
         }
 
 
@@ -228,7 +228,7 @@ namespace gymApp
 
 
 
-        private void populatePlansComboBox()
+        private void fillPlansComboBox()
         {
             planClass plan = new planClass();
             DataTable dt = plan.GetList();

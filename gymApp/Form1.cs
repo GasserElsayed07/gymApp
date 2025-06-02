@@ -81,7 +81,7 @@ namespace gymApp
 
         private void Login_button_Click(object sender, EventArgs e)
         {
-            MySqlCommand command =  new MySqlCommand("SELECT * FROM `trainers` WHERE `trianerName` = @username AND `trianerPassword` = @pass", connection.getConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `trainers` WHERE `trianerName` = @username AND `trianerPassword` = @pass", connection.getConnection);
             command.Parameters.Add("@username", MySqlDbType.VarChar).Value = textBox_username.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox_password.Text;
             if (textBox_username.Text == "" || textBox_password.Text == "")
@@ -105,6 +105,27 @@ namespace gymApp
                 }
                 connection.closeConnection();
             }
+        }
+
+        private void textBox_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox_password.Focus();
+            }
+        }
+
+        private void textBox_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login_button.PerformClick();
+            }
+        }
+
+        private void button_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

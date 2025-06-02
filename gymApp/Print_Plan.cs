@@ -38,7 +38,7 @@ namespace gymApp
             this.Hide();
         }
 
-        
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -139,6 +139,11 @@ namespace gymApp
             ClientPrint Clientprinnt = new ClientPrint();
             Clientprinnt.Show();
             this.Hide();
+        }
+
+        private void plandataGridViewPrint_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

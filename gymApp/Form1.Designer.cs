@@ -46,6 +46,7 @@
             pictureBox5 = new PictureBox();
             textBox_password = new TextBox();
             button1 = new Button();
+            button_minimize = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -162,13 +163,13 @@
             textBox_username.ForeColor = SystemColors.ActiveCaptionText;
             textBox_username.Location = new Point(107, 274);
             textBox_username.Margin = new Padding(3, 2, 3, 2);
-            textBox_username.Multiline = true;
             textBox_username.Name = "textBox_username";
             textBox_username.PlaceholderText = "Username";
-            textBox_username.Size = new Size(264, 18);
+            textBox_username.Size = new Size(264, 16);
             textBox_username.TabIndex = 10;
             textBox_username.Tag = "";
             textBox_username.TextChanged += username_TextChanged;
+            textBox_username.KeyDown += textBox_username_KeyDown;
             // 
             // pictureBox5
             // 
@@ -189,13 +190,13 @@
             textBox_password.ForeColor = SystemColors.ActiveCaptionText;
             textBox_password.Location = new Point(107, 354);
             textBox_password.Margin = new Padding(3, 2, 3, 2);
-            textBox_password.Multiline = true;
             textBox_password.Name = "textBox_password";
             textBox_password.PasswordChar = '*';
             textBox_password.PlaceholderText = "Password";
-            textBox_password.Size = new Size(265, 18);
+            textBox_password.Size = new Size(265, 16);
             textBox_password.TabIndex = 13;
             textBox_password.Tag = " ";
+            textBox_password.KeyDown += textBox_password_KeyDown;
             // 
             // button1
             // 
@@ -210,12 +211,26 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
+            // button_minimize
+            // 
+            button_minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button_minimize.BackColor = Color.RosyBrown;
+            button_minimize.FlatStyle = FlatStyle.Flat;
+            button_minimize.Location = new Point(395, -1);
+            button_minimize.Name = "button_minimize";
+            button_minimize.Size = new Size(22, 22);
+            button_minimize.TabIndex = 15;
+            button_minimize.Text = "-";
+            button_minimize.UseVisualStyleBackColor = false;
+            button_minimize.Click += button_minimize_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(438, 525);
+            Controls.Add(button_minimize);
             Controls.Add(button1);
             Controls.Add(textBox_password);
             Controls.Add(pictureBox5);
@@ -257,5 +272,6 @@
         private PictureBox pictureBox5;
         private TextBox textBox_password;
         private Button button1;
+        private Button button_minimize;
     }
 }

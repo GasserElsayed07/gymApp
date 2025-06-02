@@ -142,9 +142,9 @@ namespace gymApp
         private void button_update_Click(object sender, EventArgs e)
         {
             int id;
-            if (true)
+            if (!int.TryParse(managePlandataGridView.CurrentRow.Cells[0].Value.ToString(), out id))
             {
-                MessageBox.Show("Please select a valid plan ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a row with a valid ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string planName = textBox_managePlanName.Text;
@@ -166,7 +166,12 @@ namespace gymApp
 
         private void button13_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            int id;
+            if (!int.TryParse(managePlandataGridView.CurrentRow.Cells[0].Value.ToString(), out id))
+            {
+                MessageBox.Show("Please select a row with a valid ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (MessageBox.Show("Are you sure you want to remove this plan", "Remove Plan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (plan.deleteById(id))

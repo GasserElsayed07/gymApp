@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace gymApp
@@ -20,6 +21,7 @@ namespace gymApp
             InitializeComponent();
             customizeDesign();
             showData();
+            fillPlansComboBox();
         }
         private void customizeDesign()
         {
@@ -95,7 +97,7 @@ namespace gymApp
             textBox_manageWeight.Text = ClientdataGridView.CurrentRow.Cells[5].Value.ToString();
             textBox_managePhone.Text = ClientdataGridView.CurrentRow.Cells[6].Value.ToString();
             textBox_manageAddress.Text = ClientdataGridView.CurrentRow.Cells[7].Value.ToString();
-           
+
             textBox_manageHeight.Text = ClientdataGridView.CurrentRow.Cells[10].Value.ToString();
         }
 
@@ -110,7 +112,7 @@ namespace gymApp
             textBox_manageWeight.Clear();
             textBox_managePhone.Clear();
             textBox_manageAddress.Clear();
-           
+
             textBox_manageHeight.Clear();
 
         }
@@ -125,7 +127,7 @@ namespace gymApp
 
         bool verify()
         {
-            if ((textBox_managePhone.Text == "") || (textBox_manageWeight.Text == "") || (textBox_manageHeight.Text == "") || (textBox_manageAddress.Text == "") )
+            if ((textBox_managePhone.Text == "") || (textBox_manageWeight.Text == "") || (textBox_manageHeight.Text == "") || (textBox_manageAddress.Text == ""))
             {
                 MessageBox.Show("Please fill all the fields");
                 return false;
@@ -140,7 +142,7 @@ namespace gymApp
             int id;
             if (!int.TryParse(ClientdataGridView.CurrentRow.Cells[0].Value.ToString(), out id))
             {
-                MessageBox.Show("Please select a valid user ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a row with a valid ID to update.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             DateTime joinDate = dateTimePicker_manageJoinDate.Value;
@@ -159,13 +161,14 @@ namespace gymApp
             }
             string address = textBox_manageAddress.Text;
             string joinReason = "";
+            string plan = comboBox_manageUserPlan.SelectedItem.ToString();
 
             if (verify())
             {
                 try
                 {
 
-                    if (user.updateUser(id, joinDate, weight, phone, address, joinReason, height))
+                    if (user.updateUser(id, joinDate, weight, phone, address, joinReason, height, plan))
                     {
                         MessageBox.Show("User updated successfully!", "update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         showData();
@@ -188,7 +191,7 @@ namespace gymApp
             Application.Exit();
         }
 
-    
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -204,7 +207,7 @@ namespace gymApp
             this.Hide();
         }
 
-     
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -247,6 +250,30 @@ namespace gymApp
             PrintPlan.Show();
             this.Hide();
 
+        }
+
+        private void textBox_manageHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillPlansComboBox()
+        {
+            planClass plan = new planClass();
+            DataTable dt = plan.GetList();
+
+            comboBox_manageUserPlan.Items.Clear();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string planName = dt.Rows[i]["name"].ToString();
+                comboBox_manageUserPlan.Items.Add(planName);
+            }
+
+            if (comboBox_manageUserPlan.Items.Count > 0)
+            {
+                comboBox_manageUserPlan.SelectedIndex = 0;
+            }
         }
     }
 }
