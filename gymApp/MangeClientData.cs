@@ -90,7 +90,7 @@ namespace gymApp
 
         private void ClientdataGridView_Click(object sender, EventArgs e)
         {
-            textBox_manageID.Text = ClientdataGridView.CurrentRow.Cells[0].Value.ToString();
+            
             dateTimePicker_manageJoinDate.Value = Convert.ToDateTime(ClientdataGridView.CurrentRow.Cells[4].Value);
             textBox_manageWeight.Text = ClientdataGridView.CurrentRow.Cells[5].Value.ToString();
             textBox_managePhone.Text = ClientdataGridView.CurrentRow.Cells[6].Value.ToString();
@@ -239,7 +239,7 @@ namespace gymApp
 
         private void button13_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox_manageID.Text);
+            int id = Convert.ToInt32(ClientdataGridView.CurrentRow.Cells[0].Value);
             if (MessageBox.Show("Are you sure you want to remove this user", "Remove User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (user.deleteUser(id))

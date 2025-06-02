@@ -69,9 +69,9 @@ namespace gymApp
         }
 
         public bool updateUser(int id, DateTime joinDate, int weight,
-            string phone, string address,string joinReason, int height)
+          string phone, string address, string joinReason, int height)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `user` SET `userJoinDate`= @Jdate ,`userWeight`= @weight ,`userPhone`= @phone ,`userAddress`= @address, `userJoinReason`= @Jreason,`userHeight`=@height WHERE `userID`=@id", connect.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE user SET userJoinDate= @Jdate ,userWeight= @weight ,userPhone= @phone ,userAddress= @address, userJoinReason= @Jreason,userHeight=@height WHERE userID=@id", connect.getConnection);
             // @Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image
             command.Parameters.Add("@Jdate", MySqlDbType.Date).Value = joinDate;
             command.Parameters.Add("@weight", MySqlDbType.Int32).Value = weight;
@@ -94,6 +94,7 @@ namespace gymApp
             }
 
         }
+
 
         public DataTable getListForPrint(MySqlCommand command)
         {

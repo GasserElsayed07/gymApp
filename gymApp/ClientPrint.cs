@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using DGVPrinterHelper;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,11 +7,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DGVPrinterHelper;
-using System.Reflection;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace gymApp
 {
@@ -162,9 +163,29 @@ namespace gymApp
             printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
             printer.Footer = "GymApp";
-            printer.FooterSpacing = 15;
+            printer.FooterSpacing = 20;
             printer.printDocument.DefaultPageSettings.Landscape = true;
             printer.PrintDataGridView(ClientdataGridViewPrint);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string selectedQuery="";
+            if (AllGenderradioButton1.Checked)
+            {
+                selectedQuery = "SELECT * FROM `user` ";
+            }
+            else if (MaleradioButton.Checked)
+            {
+                    selectedQuery = "SELECT * FROM `user` WHERE `userGender`= 'Male' ";
+            }
+            else if (radioButton_female.Checked)
+            {
+                selectedQuery = "SELECT * FROM `user` WHERE `userGender`='Female' ";
+
+            }
+            showData(new MySqlCommand(selectedQuery));
+        }
+       
     }
 }
