@@ -143,7 +143,7 @@ namespace gymApp
 
         public void showData()
         {
-            planDataGridView.DataSource = plan.getPlansList();
+            planDataGridView.DataSource = plan.GetList();
         }
         public bool verify()
         {

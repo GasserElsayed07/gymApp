@@ -190,7 +190,7 @@ namespace gymApp
 
         private void Usercs_Load(object sender, EventArgs e)
         {
-
+            populatePlansComboBox();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -245,6 +245,26 @@ namespace gymApp
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void populatePlansComboBox()
+        {
+            planClass plan = new planClass();
+            DataTable dt = plan.GetList();
+
+            comboBox1.Items.Clear(); // clear old items first
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                // Choose the column you want to show in the ComboBox
+                string planName = dt.Rows[i]["name"].ToString();
+                comboBox1.Items.Add(planName);
+            }
+
+            if (comboBox1.Items.Count > 0)
+            {
+                comboBox1.SelectedIndex = 0; // Optional: select first item
+            }
         }
     }
 }

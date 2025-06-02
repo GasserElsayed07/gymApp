@@ -8,9 +8,8 @@ using MySql.Data.MySqlClient;
 
 namespace gymApp
 {
-    internal class planClass
+    internal class planClass : baseClass
     {
-        DBconnecter connect = new DBconnecter();
         public bool insertPlan(string planName, string planTier, string planDuration)
         {
             MySqlCommand command = new MySqlCommand("INSERT INTO `userplan`(`name`, `tier`, `duration`) VALUES (@_name,@_tier,@_duration)",connect.getConnection);
@@ -30,13 +29,9 @@ namespace gymApp
             }
         }
 
-        public DataTable getPlansList()
+        protected override string GetQuery()
         {
-            MySqlCommand command = new MySqlCommand("Select * from userplan", connect.getConnection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable plansDataTable = new DataTable();
-            adapter.Fill(plansDataTable);
-            return plansDataTable;
+            return "SELECT * FROM `userplan`";
         }
 
         public bool updatePlan(int planId, string planName, string planTier, string planDuration)
@@ -59,21 +54,8 @@ namespace gymApp
             }
         }
 
-        public bool deletePlan(int planId)
-        {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `userplan` WHERE `id`=@_id", connect.getConnection);
-            command.Parameters.Add("@_id", MySqlDbType.Int32).Value = planId;
-            connect.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                connect.closeConnection();
-                return true;
-            }
-            else
-            {
-                connect.closeConnection();
-                return false;
-            }
-        }
+
+        protected override string TableName => "userplan";
+        protected override string PrimaryKeyColumn => "id";
     }
 }

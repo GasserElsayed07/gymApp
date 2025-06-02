@@ -120,7 +120,7 @@ namespace gymApp
 
         public void showData()
         {
-            managePlandataGridView.DataSource = plan.getPlansList();
+            managePlandataGridView.DataSource = plan.GetList();
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -187,7 +187,7 @@ namespace gymApp
             int id = Convert.ToInt32(textBox_managePlanID.Text);
             if (MessageBox.Show("Are you sure you want to remove this plan", "Remove Plan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (plan.deletePlan(id))
+                if (plan.deleteById(id))
                 {
                     showData();
                     MessageBox.Show("Plan Removed", "Remove plan", MessageBoxButtons.OK, MessageBoxIcon.Information);

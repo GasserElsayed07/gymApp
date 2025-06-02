@@ -132,7 +132,7 @@ namespace gymApp
         #endregion
         private void Print_Plan_Load(object sender, EventArgs e)
         {
-            plandataGridViewPrint.DataSource = plan.getPlansList();
+            plandataGridViewPrint.DataSource = plan.GetList();
         }
 
         private void button12_Click(object sender, EventArgs e)

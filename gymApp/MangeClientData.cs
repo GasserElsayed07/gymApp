@@ -80,7 +80,7 @@ namespace gymApp
 
         private void showData()
         {
-            ClientdataGridView.DataSource = user.getUsersList();
+            ClientdataGridView.DataSource = user.GetList();
 
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)ClientdataGridView.Columns[12];
@@ -242,7 +242,7 @@ namespace gymApp
             int id = Convert.ToInt32(ClientdataGridView.CurrentRow.Cells[0].Value);
             if (MessageBox.Show("Are you sure you want to remove this user", "Remove User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (user.deleteUser(id))
+                if (user.deleteById(id))
                 {
                     showData();
                     MessageBox.Show("User Removed", "Remove user", MessageBoxButtons.OK, MessageBoxIcon.Information);

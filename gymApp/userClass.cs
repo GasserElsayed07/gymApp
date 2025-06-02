@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace gymApp
 {
-    internal class userClass
+    internal class userClass : baseClass
     {
-        DBconnecter connect = new DBconnecter();
+        
         public bool insertUser(string Fname, string Lname, DateTime bdDate, DateTime joinDate, int weight,
             string phone, string address, string gender, string joinReason, int height, byte[] image)
         {
@@ -45,18 +45,9 @@ namespace gymApp
 
         }
 
-        public DataTable getUsersList()
+        protected override string GetQuery()
         {
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `user`", connect.getConnection);
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-
-            DataTable dataTable = new DataTable();
-
-            adapter.Fill(dataTable);
-            return dataTable;
-  
+            return "SELECT * FROM `user`";
         }
 
         public DataTable searchForUser(string searchQuery)
@@ -105,25 +96,7 @@ namespace gymApp
             return dataTable;
         }
 
-        public bool deleteUser(int id)
-        {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `user` WHERE `userID`=@id", connect.getConnection);
-
-            //@id
-            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
-
-            connect.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                connect.closeConnection();
-                return true;
-            }
-            else
-            {
-                connect.closeConnection();
-                return false;
-            }
-
-        }
+        protected override string TableName => "user";
+        protected override string PrimaryKeyColumn => "userID";
     }
 }
