@@ -141,9 +141,6 @@ namespace gymApp
             this.Hide();
         }
 
-        private void plandataGridViewPrint_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

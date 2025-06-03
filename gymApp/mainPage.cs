@@ -125,7 +125,14 @@ namespace gymApp
             ClientPrint Clientprinnt = new ClientPrint();
             Clientprinnt.Show();
             this.Hide();
-        
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Print_Plan print_Plan = new Print_Plan();
+            print_Plan.Show();
+            this.Hide();
         }
     }
 }

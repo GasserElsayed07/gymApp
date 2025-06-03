@@ -310,7 +310,7 @@
             plandataGridViewPrint.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             plandataGridViewPrint.Size = new Size(756, 350);
             plandataGridViewPrint.TabIndex = 53;
-            plandataGridViewPrint.CellContentClick += plandataGridViewPrint_CellContentClick;
+   
             // 
             // button12
             // 

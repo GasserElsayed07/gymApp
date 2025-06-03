@@ -451,7 +451,6 @@
             textBox_height.Name = "textBox_height";
             textBox_height.Size = new Size(247, 27);
             textBox_height.TabIndex = 15;
-            textBox_height.TextChanged += textBox4_TextChanged;
             // 
             // textBox_weight
             // 
@@ -600,6 +599,7 @@
             comboBox_joinReason.Name = "comboBox_joinReason";
             comboBox_joinReason.Size = new Size(247, 28);
             comboBox_joinReason.TabIndex = 18;
+        
             // 
             // comboBox1
             // 

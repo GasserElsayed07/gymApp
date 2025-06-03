@@ -330,7 +330,6 @@
             ClientdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientdataGridView.Size = new Size(765, 147);
             ClientdataGridView.TabIndex = 31;
-            ClientdataGridView.CellClick += ClientdataGridView_CellClick;
             ClientdataGridView.Click += ClientdataGridView_Click;
             // 
             // label7

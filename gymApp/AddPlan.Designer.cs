@@ -375,6 +375,7 @@
             planDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             planDataGridView.Size = new Size(641, 419);
             planDataGridView.TabIndex = 50;
+          
             // 
             // button_addPLan
             // 

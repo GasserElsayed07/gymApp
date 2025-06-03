@@ -61,15 +61,14 @@ namespace gymApp
         }
 
         public bool updateUser(int id, DateTime joinDate, int weight,
-          string phone, string address, string joinReason, int height, string plan)
+          string phone, string address,  int height, string plan)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE user SET userJoinDate= @Jdate ,userWeight= @weight ,userPhone= @phone ,userAddress= @address, userJoinReason= @Jreason,userHeight=@height,userPlan=@plan WHERE userID=@id", connect.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE user SET userJoinDate= @Jdate ,userWeight= @weight ,userPhone= @phone ,userAddress= @address, userHeight=@height,userPlan=@plan WHERE userID=@id", connect.getConnection);
             // @Fname, @Lname, @Bdate, @Jdate, @weight, @phone, @address, @gender, @Jreason, @height, @image
             command.Parameters.Add("@Jdate", MySqlDbType.Date).Value = joinDate;
             command.Parameters.Add("@weight", MySqlDbType.Int32).Value = weight;
             command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone;
             command.Parameters.Add("@address", MySqlDbType.VarChar).Value = address;
-            command.Parameters.Add("@Jreason", MySqlDbType.VarChar).Value = joinReason;
             command.Parameters.Add("@height", MySqlDbType.Int32).Value = height;
             command.Parameters.Add("@plan", MySqlDbType.VarChar).Value = plan;
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;

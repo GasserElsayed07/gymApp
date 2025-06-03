@@ -102,10 +102,7 @@ namespace gymApp
             comboBox_manageUserPlan.SelectedItem = ClientdataGridView.CurrentRow.Cells[11].Value.ToString();
         }
 
-        private void ClientdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void button_Clear_Click(object sender, EventArgs e)
         {
@@ -161,7 +158,7 @@ namespace gymApp
                 return;
             }
             string address = textBox_manageAddress.Text;
-            string joinReason = "";
+       
             string plan = comboBox_manageUserPlan.SelectedItem.ToString();
 
             if (verify())
@@ -169,7 +166,7 @@ namespace gymApp
                 try
                 {
 
-                    if (user.updateUser(id, joinDate, weight, phone, address, joinReason, height, plan))
+                    if (user.updateUser(id, joinDate, weight, phone, address, height, plan))
                     {
                         MessageBox.Show("User updated successfully!", "update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         showData();

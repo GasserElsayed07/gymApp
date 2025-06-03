@@ -95,8 +95,9 @@
             button8.Name = "button8";
             button8.Size = new Size(202, 29);
             button8.TabIndex = 4;
-            button8.Text = "Print";
+            button8.Text = "Print Plans";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // PrintClientbutton
             // 

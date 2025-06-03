@@ -92,7 +92,7 @@ namespace gymApp
             this.Hide();
         }
 
-     
+
 
 
 
@@ -105,11 +105,11 @@ namespace gymApp
 
 
         #endregion
-      
 
-    
 
-  
+
+
+
         public void showData()
         {
             planDataGridView.DataSource = plan.GetList();
@@ -141,7 +141,7 @@ namespace gymApp
 
         }
 
-       
+
         private void button8_Click(object sender, EventArgs e)
         {
             ClientPrint Clientprinnt = new ClientPrint();
@@ -155,5 +155,7 @@ namespace gymApp
             PrintPlan.Show();
             this.Hide();
         }
+
+      
     }
 }

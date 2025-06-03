@@ -71,10 +71,7 @@ namespace gymApp
             Application.Exit();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void button_Add_Click(object sender, EventArgs e)
         {
@@ -192,6 +189,7 @@ namespace gymApp
         private void Usercs_Load(object sender, EventArgs e)
         {
             fillPlansComboBox();
+            comboBox_joinReason_SelectedIndexChanged(sender, e);
         }
 
 
@@ -224,6 +222,7 @@ namespace gymApp
             mainPage.Show();
             this.Hide();
         }
+
 
 
 
@@ -262,6 +261,14 @@ namespace gymApp
             Print_Plan PrintPlan = new Print_Plan();
             PrintPlan.Show();
             this.Hide();
+        }
+
+        private void comboBox_joinReason_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_joinReason.Items.Count > 0)
+            {
+                comboBox_joinReason.SelectedIndex = 0;
+            }
         }
     }
 }
